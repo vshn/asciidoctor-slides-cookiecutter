@@ -12,5 +12,5 @@ NOTE: It is recommended to use https://github.com/rbenv/rbenv[rbenv] to manage y
 
 == Build
 
-Use the `make` command to drive the build process. You should have a `slides.html` file afterwards next to the Asciidoc source.
+Use the `make` command to drive the build process. You should have a `demo.html` file afterwards next to the Asciidoc source.
 
