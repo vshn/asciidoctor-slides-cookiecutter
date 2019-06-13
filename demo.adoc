@@ -29,7 +29,7 @@
 
 image::assets/images/vshn.png[]
 
-== Slide One
+== Admonition
 
 TIP: This is a tip
 
@@ -42,7 +42,7 @@ TIP: This is a tip
 Slide with no title
 
 [background-color="black"]
-== Slide Two
+== Bulletpoints
 
 A Great Story
 
@@ -62,20 +62,11 @@ A Great Story
 
 video::assets/videos/toast.mp4[]
 
-== Slide Three
+== Code
 
 [source,yaml]
 ----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: apvc
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 1Gi
+include::assets/code/stuff.yml[]
 ----
 
 == Thanks!
