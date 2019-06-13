@@ -41,6 +41,8 @@ TIP: This is a tip
 
 Slide with no title
 
+Font Awesome icons: icon:tags[] icon:flag[]
+
 [background-color="black"]
 == Bulletpoints
 
