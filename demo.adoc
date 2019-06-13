@@ -29,6 +29,7 @@
 
 image::assets/images/vshn.png[]
 
+
 == Admonition
 
 TIP: This is a tip
@@ -37,11 +38,20 @@ TIP: This is a tip
 * Bar
 * World
 
+
 == !
 
 Slide with no title
 
-Font Awesome icons: icon:tags[] icon:flag[]
+Font Awesome icons: icon:tags[] icon:heart[size=2x]
+
+Download: icon:download[link="https://handbook-vshn.appuioapp.ch/handbook.pdf"]
+
+[.notes]
+--
+More icons here: https://fontawesome.com/icons?d=gallery&m=free
+--
+
 
 [background-color="black"]
 == Bulletpoints
@@ -54,15 +64,18 @@ A Great Story
 * make a point
 --
 
+
 == !
 
 ++++
 <asciinema-player src="assets/casts/backup.cast" cols="86" rows="21" idle-time-limit="1" poster="npt:0:40" speed="1.1" font-size="big" theme="tango"></asciinema-player>
 ++++
 
+
 == Video
 
 video::assets/videos/toast.mp4[]
+
 
 == Code
 
@@ -70,6 +83,7 @@ video::assets/videos/toast.mp4[]
 ----
 include::assets/code/stuff.yml[]
 ----
+
 
 == Thanks!
 
@@ -81,3 +95,4 @@ your.email@vshn.ch
 <link rel="stylesheet" href="lib/asciinema/asciinema-player.css">
 <script src="lib/asciinema/asciinema-player.js"></script>
 ++++
+
