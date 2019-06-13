@@ -54,10 +54,6 @@ A Great Story
 
 == !
 
-Slide with no title
-
-== !
-
 ++++
 <asciinema-player src="assets/casts/backup.cast" cols="86" rows="21" idle-time-limit="1" poster="npt:0:40" speed="1.1" font-size="big" theme="tango"></asciinema-player>
 ++++
