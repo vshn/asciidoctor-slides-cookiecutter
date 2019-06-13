@@ -1,0 +1,94 @@
+// Standard Asciidoctor attributes:
+// https://asciidoctor.org/docs/user-manual/#builtin-attributes
+:author: Your name and title
+:revdate: {docdate}
+:revnumber: 1.0
+:email: info@vshn.ch
+:copyright: CC-BY-SA 3.0
+:doctitle: Title of the presentation
+:producer: VSHN AG
+:creator: VSHN AG
+:icons: font
+:icon-set: fi
+:source-highlighter: pygments
+:pygments-style: emacs
+:hide-uri-scheme:
+
+// Reveal.js-specific attributes:
+// https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
+:revealjsdir: lib/reveal.js
+:revealjs_customtheme: theme/vshn.css
+:revealjs_controls: false
+:revealjs_controlsTutorial: false
+:revealjs_transition: none
+:revealjs_history: true
+:revealjs_backgroundTransition: none
+:revealjs_plugin_pdf: enabled
+
+= Title
+
+image::assets/images/vshn.png[]
+
+== Slide One
+
+TIP: This is a tip
+
+* Foo
+* Bar
+* World
+
+== !
+
+Slide with no title
+
+[background-color="black"]
+== Slide Two
+
+A Great Story
+
+[.notes]
+--
+* tell anecdote
+* make a point
+--
+
+== !
+
+Slide with no title
+
+== !
+
+++++
+<asciinema-player src="assets/casts/backup.cast" cols="86" rows="21" idle-time-limit="1" poster="npt:0:40" speed="1.1" font-size="big" theme="tango"></asciinema-player>
+++++
+
+== Video
+
+video::assets/videos/toast.mp4[]
+
+== Slide Three
+
+[source,yaml]
+----
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: apvc
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+----
+
+== Thanks!
+
+image::assets/images/appuio.png[]
+
+your.email@vshn.ch
+
+++++
+<link rel="stylesheet" href="lib/asciinema/asciinema-player.css">
+<script src="lib/asciinema/asciinema-player.js"></script>
+++++

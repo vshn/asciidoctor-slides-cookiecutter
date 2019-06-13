@@ -1,0 +1,16 @@
+= Reveal.js Presentation Template
+
+Use this project to bootstrap your next presentation!
+
+== Requisites
+
+This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
+
+`gem install asciidoctor-revealjs`
+
+NOTE: It is recommended to use https://github.com/rbenv/rbenv[rbenv] to manage your Ruby gems.
+
+== Build
+
+Use the `make` command to drive the build process. You should have a `slides.html` file afterwards next to the Asciidoc source.
+
