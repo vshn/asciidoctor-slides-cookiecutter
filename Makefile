@@ -7,7 +7,7 @@ embedded:
 	asciidoctor-revealjs --attribute data-uri --attribute revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 --attribute revealjs_embedded=true --out-file=demo_embedded.html demo.adoc
 
 %.html: %.adoc lib/reveal.js lib/asciinema
-	asciidoctor-revealjs $<
+	FILENAME=$< yarn build
 
 lib/reveal.js:
 	mkdir -p $@

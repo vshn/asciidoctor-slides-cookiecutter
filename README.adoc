@@ -10,7 +10,7 @@ Run the `yarn install` command after cloning this repository.
 
 == Build
 
-Use the command `FILENAME=demo.adoc yarn build` to build the presentation file. The new file `demo.html` is your presentation, to be open with any standards-compliant browser.
+Use the command `make` to build the presentation file. The new file `demo.html` is your presentation, to be open with any standards-compliant browser.
 
 == Docker
 

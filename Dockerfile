@@ -12,7 +12,7 @@ RUN yarn install && \
 # ---------- STEP 2 ----------
 # Build the documentation in web format
 COPY . /presentation
-RUN FILENAME=demo.adoc yarn build
+RUN make
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built documentation
