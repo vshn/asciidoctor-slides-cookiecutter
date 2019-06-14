@@ -6,11 +6,12 @@ Use this project to bootstrap your next presentation!
 
 This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
 
-`gem install asciidoctor-revealjs`
-
-NOTE: It is recommended to use https://github.com/rbenv/rbenv[rbenv] to manage your Ruby gems.
+Run the `yarn install` command after cloning this repository. 
 
 == Build
 
-Use the `make` command to drive the build process. You should have a `demo.html` file afterwards next to the Asciidoc source.
+Use the command `FILENAME=demo.adoc yarn build` to build the presentation file. The new file `demo.html` is your presentation, to be open with any standards-compliant browser.
 
+== Docker
+
+You can create a Docker image using the command `docker build -t presentation .`. Then run it using the `docker run -d -p 8081:8080 presentation` command. Open your browser at http://localhost:8081/ to see the presentation.

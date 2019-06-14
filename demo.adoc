@@ -10,9 +10,8 @@
 :creator: VSHN AG
 :icons: font
 :icon-set: fi
-:source-highlighter: pygments
-:pygments-style: emacs
 :hide-uri-scheme:
+:source-highlighter: highlightjs
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
