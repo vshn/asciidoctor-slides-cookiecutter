@@ -10,12 +10,12 @@ RUN yarn install && \
     make lib/reveal.js
 
 # ---------- STEP 2 ----------
-# Build the documentation in web format
+# Build the presentation in web format
 COPY . /presentation
 RUN make
 
 # ---------- STEP 3 ----------
-# Docker image only containing nginx and the freshly built documentation
+# Docker image only containing nginx and the freshly built presentation
 
 # The following lines make this image compatible with OpenShift.
 # Source: https://torstenwalter.de/openshift/nginx/2017/08/04/nginx-on-openshift.html
@@ -30,7 +30,7 @@ RUN \
     # comment user directive as master process is run as different user anyhow
     sed -i.bak 's/^user/#user/' /etc/nginx/nginx.conf
 
-# Finally, copy the contents of the documentation to be served
+# Finally, copy the contents of the presentation to be served
 COPY --from=builder /presentation/demo.html /usr/share/nginx/html/index.html
 COPY --from=builder /presentation/assets /usr/share/nginx/html/assets
 COPY --from=builder /presentation/lib /usr/share/nginx/html/lib
