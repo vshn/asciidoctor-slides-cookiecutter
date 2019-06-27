@@ -6,7 +6,7 @@ Use this project to bootstrap your next presentation!
 
 This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
 
-Run the `yarn install` command after cloning this repository. 
+It requires Node.js (version 10 or higher) and npm (version 6 or higher). It is recommended to use the https://github.com/nvm-sh/nvm[Node Version Manager] to install them.
 
 == Build
 
