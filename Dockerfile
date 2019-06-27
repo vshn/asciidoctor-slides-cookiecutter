@@ -4,8 +4,8 @@ FROM node:10.14.2-alpine AS builder
 
 RUN apk add make curl
 WORKDIR /presentation
-COPY ["package.json", "yarn.lock", "Makefile", "/presentation/"]
-RUN yarn install && \
+COPY ["package.json", "package-lock.json", "Makefile", "/presentation/"]
+RUN make node_modules && \
     make lib/asciinema && \
     make lib/reveal.js
 
