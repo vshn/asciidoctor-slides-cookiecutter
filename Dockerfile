@@ -16,12 +16,12 @@ RUN make
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation
-
-# The following lines make this image compatible with OpenShift.
-# Source: https://torstenwalter.de/openshift/nginx/2017/08/04/nginx-on-openshift.html
 FROM nginx:stable
 
 EXPOSE 8080
+
+# The following lines make this image compatible with OpenShift.
+# Source: https://torstenwalter.de/openshift/nginx/2017/08/04/nginx-on-openshift.html
 RUN \
     # support running as arbitrary user which belogs to the root group
     chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
