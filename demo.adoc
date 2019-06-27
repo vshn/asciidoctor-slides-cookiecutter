@@ -10,9 +10,8 @@
 :creator: VSHN AG
 :icons: font
 :icon-set: fi
-:source-highlighter: pygments
-:pygments-style: emacs
 :hide-uri-scheme:
+:source-highlighter: highlightjs
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
@@ -29,7 +28,8 @@
 
 image::assets/images/vshn.png[]
 
-== Slide One
+
+== Admonition
 
 TIP: This is a tip
 
@@ -37,12 +37,23 @@ TIP: This is a tip
 * Bar
 * World
 
+
 == !
 
 Slide with no title
 
+Font Awesome icons: icon:tags[] icon:heart[size=2x]
+
+Download: icon:download[link="https://handbook-vshn.appuioapp.ch/handbook.pdf"]
+
+[.notes]
+--
+More icons here: https://fontawesome.com/icons?d=gallery&m=free
+--
+
+
 [background-color="black"]
-== Slide Two
+== Bulletpoints
 
 A Great Story
 
@@ -52,9 +63,6 @@ A Great Story
 * make a point
 --
 
-== !
-
-Slide with no title
 
 == !
 
@@ -62,25 +70,19 @@ Slide with no title
 <asciinema-player src="assets/casts/backup.cast" cols="86" rows="21" idle-time-limit="1" poster="npt:0:40" speed="1.1" font-size="big" theme="tango"></asciinema-player>
 ++++
 
+
 == Video
 
 video::assets/videos/toast.mp4[]
 
-== Slide Three
+
+== Code
 
 [source,yaml]
 ----
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: apvc
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 1Gi
+include::assets/code/stuff.yml[]
 ----
+
 
 == Thanks!
 
@@ -92,3 +94,4 @@ your.email@vshn.ch
 <link rel="stylesheet" href="lib/asciinema/asciinema-player.css">
 <script src="lib/asciinema/asciinema-player.js"></script>
 ++++
+

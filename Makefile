@@ -6,8 +6,11 @@ clean:
 embedded:
 	asciidoctor-revealjs --attribute data-uri --attribute revealjsdir=https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0 --attribute revealjs_embedded=true --out-file=demo_embedded.html demo.adoc
 
-%.html: %.adoc lib/reveal.js lib/asciinema
-	asciidoctor-revealjs $<
+%.html: %.adoc lib/reveal.js lib/asciinema node_modules
+	FILENAME=$< npm run build
+
+node_modules:
+	npm install
 
 lib/reveal.js:
 	mkdir -p $@
