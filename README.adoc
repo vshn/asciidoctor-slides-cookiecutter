@@ -1,6 +1,6 @@
 = Reveal.js Presentation Template
 
-Use this project to bootstrap your next presentation!
+Fork this project to bootstrap your next presentation!
 
 == Requisites
 
