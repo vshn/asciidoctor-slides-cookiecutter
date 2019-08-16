@@ -14,4 +14,10 @@ Use the command `make` to build the presentation file. The new file `demo.html` 
 
 == Docker
 
-You can create a Docker image using the command `docker build -t presentation .`. Then run it using the `docker run -d -p 8081:8080 presentation` command. Open your browser at http://localhost:8081/ to see the presentation.
+You can create a Docker image using the command `docker build -t presentation .`. Then run it using the `docker run -d -p 8080:8080 presentation` command. Open your browser at http://localhost:8080/ to see the presentation.
+
+== Docker Compose
+
+Going one step further, you can also run `docker-compose up --build` and open your browser at http://localhost:8080/
+to see the presentation. Leaving out the `d` flag enables you to easily start/stop the presentation with a rebuild in
+between, for easier development.
