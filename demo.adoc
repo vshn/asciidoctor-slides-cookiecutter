@@ -44,7 +44,7 @@ Slide with no title
 
 Font Awesome icons: icon:tags[] icon:heart[size=2x]
 
-Download: icon:download[link="https://handbook-vshn.appuioapp.ch/handbook.pdf"]
+Download: icon:download[link="https://handbook.vshn.ch/handbook.pdf"]
 
 [.notes]
 --
