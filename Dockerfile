@@ -16,7 +16,7 @@ RUN make
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation
-FROM nginx:stable
+FROM nginx:stable-alpine
 
 EXPOSE 8080
 
