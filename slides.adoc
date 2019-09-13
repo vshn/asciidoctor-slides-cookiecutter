@@ -37,15 +37,25 @@ image::assets/images/vshn.png[]
 
 
 // This is a comment!
-== Admonition & Bulletpoints
-
-TIP: This is a tip
+== Bullet Points
 
 // Make bulletpoints appear one by one
 [%step]
 * Foo
 * Bar
 * World
+
+
+
+
+== Admonition Blocks
+
+TIP: This is a tip
+
+NOTE: This is a note
+
+WARNING: This is a warning
+
 
 
 
@@ -67,6 +77,8 @@ Font Awesome icons: icon:tags[] icon:heart[size=2x]
 
 Download: icon:download[link="https://handbook.vshn.ch/handbook.pdf"]
 
+// These are speaker notes; hit "S" while the presentation is showing
+// so that they appear in a separate browser window.
 [.notes]
 --
 More icons here: https://fontawesome.com/icons?d=gallery&m=free
@@ -78,7 +90,7 @@ More icons here: https://fontawesome.com/icons?d=gallery&m=free
 [background-color="black"]
 == Black Background
 
-A Great Story
+Great for images
 
 [.notes]
 --
