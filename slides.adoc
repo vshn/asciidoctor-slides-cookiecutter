@@ -129,7 +129,9 @@ video::assets/videos/toast.mp4[]
 
 
 
-// Slide with some source code, including highlighting
+// Slide with some source code, including highlighting.
+// You do not need to paste the code here, you can insert it here
+// directly from an external file.
 == Code
 
 [source,yaml]
