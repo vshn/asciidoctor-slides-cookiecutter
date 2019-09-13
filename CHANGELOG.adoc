@@ -14,3 +14,8 @@ Version 1.1.1 (Fri 13 Sep 2019)
 - Expanded Docker build process to include PDF generation.
 - Simplified the integration of Asciinema and Reveal.js using npm.
 
+Version 1.2 (Fri 13 Sep 2019)
+
+- Removed embedded web font, using the one provided by npm.
+- Added comments and documentation to the default slides.
+
