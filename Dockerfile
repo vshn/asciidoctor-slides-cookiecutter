@@ -21,6 +21,8 @@ COPY --from=htmlmaker /presentation/assets /slides/assets
 COPY --from=htmlmaker /presentation/theme /slides/theme
 COPY --from=htmlmaker /presentation/node_modules/asciinema-player /slides/node_modules/asciinema-player
 COPY --from=htmlmaker /presentation/node_modules/reveal.js /slides/node_modules/reveal.js
+COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /slides/node_modules/typeface-ubuntu
+COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /slides/node_modules/typeface-ubuntu-mono
 RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
 
 # ---------- STEP 4 ----------
@@ -45,6 +47,8 @@ COPY --from=htmlmaker /presentation/assets /usr/share/nginx/html/assets
 COPY --from=htmlmaker /presentation/theme /usr/share/nginx/html/theme
 COPY --from=htmlmaker /presentation/node_modules/asciinema-player /usr/share/nginx/html/node_modules/asciinema-player
 COPY --from=htmlmaker /presentation/node_modules/reveal.js /usr/share/nginx/html/node_modules/reveal.js
+COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /usr/share/nginx/html/node_modules/typeface-ubuntu
+COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /usr/share/nginx/html/node_modules/typeface-ubuntu-mono
 COPY --from=pdfmaker /slides/slides.pdf /usr/share/nginx/html/slides.pdf
 
 # Don't run as root even in plain docker

@@ -27,6 +27,8 @@
   "dependencies": {
     "asciinema-player": "^2.6.1",
     "http-serve": "^1.0.1",
-    "reveal.js": "^3.8.0"
+    "reveal.js": "^3.8.0",
+    "typeface-ubuntu": "0.0.65",
+    "typeface-ubuntu-mono": "0.0.72"
   }
 }
