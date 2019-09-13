@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "node_modules/.bin/ts-node scripts/build.ts $FILENAME",
+    "serve": "node_modules/.bin/http-serve",
     "clean": "rm *.html"
   },
   "repository": {
@@ -22,5 +23,10 @@
     "ts-node": "^8.2.0",
     "typescript": "^3.5.2",
     "@types/node": "^12.0.8"
+  },
+  "dependencies": {
+    "asciinema-player": "^2.6.1",
+    "http-serve": "^1.0.1",
+    "reveal.js": "^3.8.0"
   }
 }
