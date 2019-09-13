@@ -2,6 +2,32 @@
 
 Fork this project to bootstrap your next presentation!
 
+== How To Use
+
+. Remember to install Node.js and npm, and then `npm install` to setup all dependencies.
+. The file `slides.adoc` contains a textual description of the slides.
+. Configure the title and author at the top of the document.
+. Separate slides with `==` titles.
+** Please refer to the `slides.adoc` file provided for examples like bulleted lists, images, videos, source code, and Asciinema movies.
+. The `Makefile` knows how to make the HTML or the PDF file; just type `make slides.html` or `make slides.pdf` while you are working.
+
+NOTE: The speaker notes can be seen by hitting the `S` key in your keyboard while the slides are showing on the browser.
+
+== Browser Compatibility
+
+This template provides the same visual experience in any modern browser. It has been tested with:
+
+* All Platforms:
+** Chrome
+** Opera
+** Firefox
+* Microsoft Windows:
+** Edge
+* Apple macOS:
+** Safari
+
+All browsers display the same visuals, including the default VSHN font, movies and other features.
+
 == Requisites
 
 This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
@@ -17,4 +43,3 @@ Use the command `make` to build the presentation file. The new file `slides.html
 Run `docker-compose up --build` and open your browser at http://localhost:8080/ to see the presentation. The PDF slides are located at the URL http://localhost:8080/slides.pdf ready to be downloaded.
 
 TIP: Leaving out the `d` flag enables you to easily start/stop the presentation with a rebuild in between, for easier development.
-
