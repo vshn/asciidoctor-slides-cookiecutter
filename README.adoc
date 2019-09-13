@@ -10,7 +10,7 @@ It requires Node.js (version 10 or higher) and npm (version 6 or higher). It is 
 
 == Build
 
-Use the command `make` to build the presentation file. The new file `demo.html` is your presentation, to be open with any standards-compliant browser.
+Use the command `make` to build the presentation file. The new file `slides.html` is your presentation, to be open with any standards-compliant browser. This task also creates a `slides.pdf` file, ready to be shared.
 
 == Docker
 

@@ -12,7 +12,7 @@ RUN make node_modules && \
 # ---------- STEP 2 ----------
 # Build the presentation in web format
 COPY . /presentation
-RUN make
+RUN make slides.html
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation
@@ -31,7 +31,7 @@ RUN \
     sed -i.bak 's/^user/#user/' /etc/nginx/nginx.conf
 
 # Finally, copy the contents of the presentation to be served
-COPY --from=builder /presentation/demo.html /usr/share/nginx/html/index.html
+COPY --from=builder /presentation/slides.html /usr/share/nginx/html/index.html
 COPY --from=builder /presentation/assets /usr/share/nginx/html/assets
 COPY --from=builder /presentation/lib /usr/share/nginx/html/lib
 COPY --from=builder /presentation/theme /usr/share/nginx/html/theme
