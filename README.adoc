@@ -28,6 +28,8 @@ This template provides the same visual experience in any modern browser. It has 
 
 All browsers display the same visuals, including the default VSHN font, movies and other features.
 
+TIP: Use a reverse proxy like https://ngrok.com/[ngrok] to share your slides live with your audience!
+
 == Requisites
 
 This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
