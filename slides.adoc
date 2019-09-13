@@ -1,13 +1,16 @@
-// Standard Asciidoctor attributes:
-// https://asciidoctor.org/docs/user-manual/#builtin-attributes
-:author: Your name and title
-:revdate: {docdate}
-:revnumber: 1.0
-:email: info@vshn.ch
-:copyright: CC-BY-SA 3.0
+// First and foremost:
+// Remember to change this!
+:author: Your full name
 :doctitle: Title of the presentation
+:email: info@vshn.ch
 :producer: VSHN AG
 :creator: VSHN AG
+:revnumber: 1.0
+:copyright: CC-BY-SA 3.0
+
+// Other standard Asciidoctor attributes:
+// https://asciidoctor.org/docs/user-manual/#builtin-attributes
+:revdate: {docdate}
 :icons: font
 :icon-set: fi
 :hide-uri-scheme:
@@ -23,6 +26,7 @@
 :revealjs_history: true
 :revealjs_backgroundTransition: none
 :revealjs_plugin_pdf: enabled
+
 
 
 
@@ -56,6 +60,9 @@ NOTE: This is a note
 
 WARNING: This is a warning
 
+CAUTION: You have been warned
+
+IMPORTANT: This is very important
 
 
 
