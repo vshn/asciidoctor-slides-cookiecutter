@@ -278,3 +278,16 @@ body {
 @media print {
   .backgrounds {
     background-color: #fff; } }
+
+/*********************************************
+ * CUSTOM ROLES
+ *********************************************/
+
+section.coverimage>h2,
+section.coverimage>.ulist,
+section.coverimage>.olist,
+section.coverimage>.admonitionblock,
+section.coverimage>.paragraph {
+  background-color: rgba(255,255,255,0.6);
+}
+
