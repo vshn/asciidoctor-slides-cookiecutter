@@ -83,6 +83,20 @@ video::assets/videos/toast.mp4[]
 include::assets/code/stuff.yml[]
 ----
 
+[.coverimage]
+== Slide with a Background image
+
+image::assets/images/vision.jpg[background, size=cover]
+
+* This is an example of a list in in a slide with a background image
+* Please ensure that your cover images have a reasonable size in resolution (as big as needed) and file size (under 1MB).
+* You might want to use gimp, or simmilar tool to decrease the image size.
+
+[.notes]
+--
+* Setting a jpg to 75% will show no loss in quality
+* For CLI the tool `jpegoptim` can be used. It can even handle target size.
+--
 
 == Thanks!
 
