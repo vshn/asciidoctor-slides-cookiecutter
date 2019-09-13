@@ -25,7 +25,7 @@
 :revealjs_transition: none
 :revealjs_history: true
 :revealjs_backgroundTransition: none
-:revealjs_plugin_pdf: enabled
+
 
 
 
@@ -67,6 +67,7 @@ IMPORTANT: This is very important
 
 
 
+// No need to write down the numbers
 == Numbered List
 
 . First
@@ -76,9 +77,9 @@ IMPORTANT: This is very important
 
 
 
-== !
 
-Slide with no title
+// The "!" is simply here to specify a slide without title
+== !
 
 Font Awesome icons: icon:tags[] icon:heart[size=2x]
 
@@ -94,6 +95,8 @@ More icons here: https://fontawesome.com/icons?d=gallery&m=free
 
 
 
+
+// Any CSS color will do the trick.
 [background-color="black"]
 == Black Background
 
@@ -101,8 +104,7 @@ Great for images
 
 [.notes]
 --
-* tell anecdote
-* make a point
+Remember to tell a nice anecdote and to make a point.
 --
 
 
