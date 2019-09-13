@@ -5,9 +5,7 @@ FROM node:10.14.2-alpine AS builder
 RUN apk add make curl
 WORKDIR /presentation
 COPY ["package.json", "package-lock.json", "Makefile", "/presentation/"]
-RUN make node_modules && \
-    make lib/asciinema && \
-    make lib/reveal.js
+RUN make node_modules
 
 # ---------- STEP 2 ----------
 # Build the presentation in web format
@@ -33,8 +31,9 @@ RUN \
 # Finally, copy the contents of the presentation to be served
 COPY --from=builder /presentation/slides.html /usr/share/nginx/html/index.html
 COPY --from=builder /presentation/assets /usr/share/nginx/html/assets
-COPY --from=builder /presentation/lib /usr/share/nginx/html/lib
 COPY --from=builder /presentation/theme /usr/share/nginx/html/theme
+COPY --from=builder /presentation/node_modules/asciinema-player /usr/share/nginx/html/node_modules/asciinema-player
+COPY --from=builder /presentation/node_modules/reveal.js /usr/share/nginx/html/node_modules/reveal.js
 
 # Don't run as root even in plain docker
 USER 1001:0
