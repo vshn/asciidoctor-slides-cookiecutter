@@ -15,7 +15,7 @@
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
-:revealjsdir: lib/reveal.js
+:revealjsdir: node_modules/reveal.js
 :revealjs_customtheme: theme/vshn.css
 :revealjs_controls: false
 :revealjs_controlsTutorial: false
@@ -91,7 +91,7 @@ image::assets/images/appuio.png[]
 your.email@vshn.ch
 
 ++++
-<link rel="stylesheet" href="lib/asciinema/asciinema-player.css">
-<script src="lib/asciinema/asciinema-player.js"></script>
+<link rel="stylesheet" href="node_modules/asciinema-player/resources/public/css/asciinema-player.css">
+<script src="node_modules/asciinema-player/resources/public/js/asciinema-player.js"></script>
 ++++
 
