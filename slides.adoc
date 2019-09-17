@@ -162,9 +162,9 @@ image::assets/images/vision.jpg[background, size=cover]
 
 image::assets/images/appuio.png[]
 
-your.email@vshn.ch
+{author} – {email}
 
-link:slides.pdf[Download this presentation!]
+link:slides.pdf[Download this presentation as a PDF file]
 
 [.notes]
 --
