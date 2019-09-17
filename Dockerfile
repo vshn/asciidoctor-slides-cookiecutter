@@ -2,15 +2,14 @@
 # Downloading all dependencies
 FROM node:10.14.2-alpine AS htmlmaker
 
-RUN apk add make curl
 WORKDIR /presentation
-COPY ["package.json", "package-lock.json", "Makefile", "/presentation/"]
-RUN make node_modules
+COPY ["package.json", "package-lock.json", "/presentation/"]
+RUN npm install
 
 # ---------- STEP 2 ----------
 # Build the presentation in web format
 COPY . /presentation
-RUN make slides.html
+RUN FILENAME=slides.adoc npm run build
 
 # ---------- STEP 3 ----------
 # Build the presentation in PDF format
