@@ -141,6 +141,10 @@ video::assets/videos/toast.mp4[]
 include::assets/code/stuff.yml[]
 ----
 
+
+
+
+
 [.coverimage]
 == Slide with a Background image
 
@@ -155,6 +159,7 @@ image::assets/images/vision.jpg[background, size=cover]
 * Setting a jpg to 75% will show no loss in quality
 * For CLI the tool `jpegoptim` can be used. It can even handle target size.
 --
+
 
 
 
