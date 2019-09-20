@@ -85,6 +85,18 @@ Another Thing:: Another thing is defined here
 
 
 
+// Super easy to present tabular data stored in a CSV file
+== Table
+
+[cols="h,d,d,d",options="header",format=csv]
+|===
+include::assets/data/data.csv[]
+|===
+
+
+
+
+
 // The "!" is simply here to specify a slide without title
 == !
 
