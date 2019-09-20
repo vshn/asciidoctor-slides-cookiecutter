@@ -51,7 +51,7 @@ image::assets/images/vshn.png[]
 
 
 
-
+// Useful to call for attention
 == Admonition Blocks
 
 TIP: This is a tip
@@ -74,6 +74,13 @@ IMPORTANT: This is very important
 . Second
 . First
 
+
+
+// Useful when explaining technical terms
+== Definition List
+
+Thing:: A thing is defined here
+Another Thing:: Another thing is defined here
 
 
 
