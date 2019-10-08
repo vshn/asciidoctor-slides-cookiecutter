@@ -51,7 +51,7 @@ image::assets/images/vshn.png[]
 
 
 
-
+// Useful to call for attention
 == Admonition Blocks
 
 TIP: This is a tip
@@ -73,6 +73,25 @@ IMPORTANT: This is very important
 . First
 . Second
 . First
+
+
+
+// Useful when explaining technical terms
+== Definition List
+
+Thing:: A thing is defined here
+Another Thing:: Another thing is defined here
+
+
+
+
+// Super easy to present tabular data stored in a CSV file
+== Table
+
+[cols="h,d,d,d",options="header",format=csv]
+|===
+include::assets/data/data.csv[]
+|===
 
 
 
@@ -145,13 +164,26 @@ include::assets/code/stuff.yml[]
 
 
 
+[.coverimage]
+== Slide with a Background image
+
+image::assets/images/vision.jpg[background, size=cover]
+
+* This is a list in in a slide with a background image
+* Make your cover images wide enough (in pixels) and light enough (below 1 MB)
+
+
+
+
+
+
 == Thanks!
 
 image::assets/images/appuio.png[]
 
-your.email@vshn.ch
+{author} – {email}
 
-link:slides.pdf[Download this presentation!]
+link:slides.pdf[Download this presentation as a PDF file]
 
 [.notes]
 --
