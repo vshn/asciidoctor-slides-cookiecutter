@@ -2,6 +2,8 @@
 
 Fork this project to bootstrap your next presentation!
 
+**For a PDF version, visit "Jobs" in the GitLab UI, click "Download Artifacts" on the right for the export/pdf row**
+
 == How To Use
 
 . Remember to install Node.js and npm, and then `npm install` to setup all dependencies.
