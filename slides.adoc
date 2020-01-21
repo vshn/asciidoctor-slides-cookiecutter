@@ -25,6 +25,7 @@
 :revealjs_transition: none
 :revealjs_history: true
 :revealjs_backgroundTransition: none
+:revealjs_slideNumber: true
 
 
 
@@ -73,6 +74,15 @@ IMPORTANT: This is very important
 . First
 . Second
 . First
+
+
+
+
+== Horizontal Rule
+
+Use three apostrophes to insert an horizontal rule
+
+'''
 
 
 
@@ -191,6 +201,24 @@ Ask your audience to download these slides!
 --
 
 
+
+
+// Slide footer
+++++
+<div id="vshn-footer" class="footer">
+    <span class="element"><img src="assets/images/vshn_footer.png"></span>
+    <span class="element">VSHN – The DevOps Company</span>
+    <span class="element">&nbsp;</span>
+</div>
+
+<script type="text/javascript">
+window.addEventListener("load", function() {
+    revealDiv = document.querySelector("body div.reveal")
+    footer = document.getElementById("vshn-footer");
+    revealDiv.appendChild(footer);
+});
+</script>
+++++
 
 
 // Inserting some JavaScript and some CSS in the final product

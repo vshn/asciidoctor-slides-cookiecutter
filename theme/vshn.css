@@ -17,7 +17,7 @@ body {
 
 .reveal {
   font-family: "Ubuntu", Helvetica, sans-serif;
-  font-size: 42px;
+  font-size: 35px;
   font-weight: normal;
   color: #175787; }
 
@@ -48,18 +48,19 @@ body {
   margin: 0 0 20px 0;
   color: #175787;
   font-family: "Ubuntu", Helvetica, sans-serif;
-  font-weight: 600;
+  font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 2.5em; }
+  font-size: 2.6em;
+  margin-bottom: 1.2em; }
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 1.7em; }
 
 .reveal h3 {
   font-size: 1.3em; }
@@ -284,3 +285,80 @@ section.coverimage>.paragraph {
   background-color: rgba(255,255,255,0.6);
 }
 
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+
+ .reveal .slide-number {
+  font-family: "Ubuntu";
+  font-size: 50%;
+  background-color: #175787;
+  padding: 0px 15px 9px 15px;
+}
+
+
+/*********************************************
+ * FOOTER
+ *********************************************/
+
+.footer {
+  position: absolute;
+  display: table;
+  width: 100%;
+  bottom: 0;
+  background-color: #175787;
+  color: white;
+}
+
+.footer span {
+  display: table-cell;
+  padding: 0px 15px 10px 15px;
+  min-width: 150px;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-size: 50%;
+  vertical-align: middle;
+}
+
+.footer span:nth-of-type(1) {
+  text-align: left;
+  padding: 6px 15px 6px 15px;
+}
+
+.footer span:nth-last-child(1) {
+  text-align: center;
+}
+
+
+/*********************************************
+ * HORIZONTAL RULER
+ *********************************************/
+
+hr {
+  width: 30%;
+  border: 2px solid #ffa600;
+  border-radius: 5px;
+}
+
+/*********************************************
+ * FANCY UNDERLINE BELOW H2
+ *********************************************/
+
+.reveal h2,
+.reveal h1 {
+  position: relative;
+}
+
+.reveal h2::after,
+.reveal h1::after {
+  content: '';
+  height: 4px;
+  width: 30%;
+  background: #ffa600;
+  position: absolute;
+  margin: auto;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
