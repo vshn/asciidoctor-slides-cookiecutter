@@ -6,13 +6,24 @@ variables:
   FILENAME: slides.adoc
   HTML_FILE: slides.html
   PDF_FILE: slides.pdf
+  ASSETS: assets
 
 html:
   stage: render
-  image: docker.io/library/node:lts-alpine
+  image:
+    name: docker.io/vshn/asciidoctor-slides:1.0
+    entrypoint:
+    - /bin/sh
+    - -c
   script:
-  - npm install
-  - npm run build
+  - mkdir /build
+  - cp -R ${ASSETS} /build/${ASSETS}
+  - cp ${FILENAME} /build/${FILENAME}
+  - cd /presentation
+  - generate-vshn-slides ${FILENAME}
+  - cp /build/${HTML_FILE} ${CI_PROJECT_DIR}
+  - cp -R /presentation/theme ${CI_PROJECT_DIR}/theme
+  - cp -R /presentation/node_modules ${CI_PROJECT_DIR}/node_modules
   # We need artifacts in the decktape job
   artifacts:
     name: "${CI_PROJECT_NAME}_${CI_COMMIT_REF_SLUG}_${CI_JOB_NAME}"
