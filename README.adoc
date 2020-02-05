@@ -6,8 +6,8 @@ Fork this project to bootstrap your next presentation!
 
 == How To Use
 
-. Remember to install Node.js and npm, and then `npm install` to setup all dependencies.
 . The file `slides.adoc` contains a textual description of the slides.
+. The folder 'assets' contains all the resources used in the presentation (images, code snippets, etc)
 . Configure the title and author at the top of the document.
 . Separate slides with `==` titles.
 ** Please refer to the `slides.adoc` file provided for examples like bulleted lists, images, videos, source code, and Asciinema movies.
@@ -34,9 +34,7 @@ TIP: Use a reverse proxy like https://ngrok.com/[ngrok] to share your slides liv
 
 == Requisites
 
-This presentation is built from Asciidoc sources using the https://asciidoctor.org/docs/asciidoctor-revealjs/[Asciidoctor Reveal.js] integration.
-
-It requires Node.js (version 10 or higher) and npm (version 6 or higher). It is recommended to use the https://github.com/nvm-sh/nvm[Node Version Manager] to install them.
+The only requirement to use this project is Docker.
 
 == Build
 
@@ -47,3 +45,4 @@ Use the command `make` to build the presentation file. The new file `slides.html
 Run `docker-compose up --build` and open your browser at http://localhost:8080/ to see the presentation. The PDF slides are located at the URL http://localhost:8080/slides.pdf ready to be downloaded.
 
 TIP: Leaving out the `d` flag enables you to easily start/stop the presentation with a rebuild in between, for easier development.
+
