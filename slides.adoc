@@ -15,6 +15,7 @@
 :icon-set: fi
 :hide-uri-scheme:
 :source-highlighter: highlightjs
+:kroki-server-url': https://vshn-kroki.appuioapp.ch
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
@@ -75,6 +76,36 @@ IMPORTANT: This is very important
 . Second
 . First
 
+
+== Diagrams
+
+[ditaa]
+....
+                          +-------------+
+                          |             |
+                          | Exponential |
+                          |             |
+                          +-------------+
+                                 |
+                          lambda |
+                                 v
++-------------+           +-------------+           +-------------+
+|             |   tau     |             |   lambda  |             |
+|  Lognormal  |---------->|    Gamma    |<----------|   Poisson   |
+|             |           |             |---+       |             |
++-------------+           +-------------+   |       +-------------+
+      |                         ^ ^         | beta
+      |                   tau   | |         |
+      | tau                     | +---------+
+      |                   +-------------+
+      +------------------>|             |
+                          |   Normal    |
+                          |             |----+
+                          +-------------+    |
+                                     ^       | mu
+                                     |       |
+                                     +-------+
+....
 
 
 
