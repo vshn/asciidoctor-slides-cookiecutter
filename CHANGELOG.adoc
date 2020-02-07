@@ -1,8 +1,10 @@
 = Changelog
 
-== Version 1.5 (Wed 5 Feb 2020)
+== Version 1.5 (Fri 7 Feb 2020)
 
 * Simplified setup and usage with a separate Docker image
+* Added support for diagrams via Kroki
+* Added support for math content
 
 == Version 1.4 (Tue 21 Jan 2020)
 
