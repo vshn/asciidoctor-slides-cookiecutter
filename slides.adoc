@@ -16,6 +16,7 @@
 :hide-uri-scheme:
 :source-highlighter: highlightjs
 :kroki-server-url': https://vshn-kroki.appuioapp.ch
+:stem:
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
@@ -42,6 +43,7 @@ image::assets/images/vshn.svg[width=250]
 
 
 
+
 // This is a comment!
 == Bullet Points
 
@@ -50,6 +52,7 @@ image::assets/images/vshn.svg[width=250]
 * Foo
 * Bar
 * World
+
 
 
 
@@ -75,6 +78,8 @@ IMPORTANT: This is very important
 . First
 . Second
 . First
+
+
 
 
 == Diagrams
@@ -109,11 +114,28 @@ IMPORTANT: This is very important
 
 
 
+
+== Math Equations
+
+[stem] 
+++++ 
+\sqrt{37} = \sqrt{\frac{73^2-1}{12^2}} \approx \frac{73}{12} (1 - \frac{1}{2\cdot73^2})
+++++
+
+Another one:
+
+stem:[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}]
+
+
+
+
 == Horizontal Rule
 
 Use three apostrophes to insert an horizontal rule
 
 '''
+
+
 
 
 
@@ -136,7 +158,9 @@ include::assets/data/data.csv[]
 
 
 
-== Various Images
+
+
+== Various SVG Logos
 
 More in the `assets/images` folder:
 
@@ -247,7 +271,7 @@ Ask your audience to download these slides!
 
 
 
-// Slide footer
+// Blue slide footer with VSHN logo
 ++++
 <div id="vshn-footer" class="footer">
     <span class="element"><img src="assets/images/vshn_footer.png"></span>
@@ -265,9 +289,28 @@ window.addEventListener("load", function() {
 ++++
 
 
-// Inserting some JavaScript and some CSS in the final product
-// so that Asciinema movies can work.
+// Required includes for Asciinema (remove if not used)
 ++++
 <link rel="stylesheet" href="node_modules/asciinema-player/resources/public/css/asciinema-player.css">
 <script src="node_modules/asciinema-player/resources/public/js/asciinema-player.js"></script>
+++++
+
+// Required includes for MathML (remove if not used)
+++++
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  messageStyle: "none",
+  tex2jax: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    ignoreClass: "nostem|nolatexmath"
+  },
+  asciimath2jax: {
+    delimiters: [["\\$", "\\$"]],
+    ignoreClass: "nostem|noasciimath"
+  },
+  TeX: { equationNumbers: { autoNumber: "none" } }
+});
+</script>
 ++++
