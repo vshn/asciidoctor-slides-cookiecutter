@@ -11,6 +11,8 @@
 // Other standard Asciidoctor attributes:
 // https://asciidoctor.org/docs/user-manual/#builtin-attributes
 :revdate: {docdate}
+:imagesdir: assets/images
+:data-uri:
 :icons: font
 :icon-set: fi
 :hide-uri-scheme:
@@ -38,7 +40,7 @@
 // top of this file.
 = Title
 
-image::assets/images/vshn.svg[width=250]
+image::vshn.svg[width=250]
 
 
 
@@ -117,8 +119,10 @@ IMPORTANT: This is very important
 
 == Math Equations
 
+Using standard latexmath:[\LaTeX] syntax:
+
 [stem] 
-++++ 
+++++
 \sqrt{37} = \sqrt{\frac{73^2-1}{12^2}} \approx \frac{73}{12} (1 - \frac{1}{2\cdot73^2})
 ++++
 
@@ -164,13 +168,13 @@ include::assets/data/data.csv[]
 
 More in the `assets/images` folder:
 
-image:assets/images/azure.svg[width=150]
-image:assets/images/google-cloud.svg[width=150]
-image:assets/images/slack.svg[width=150]
+image:azure.svg[width=150]
+image:google-cloud.svg[width=150]
+image:slack.svg[width=150]
 
-image:assets/images/aws.svg[width=150]
-image:assets/images/red-hat.svg[width=150]
-image:assets/images/docker.svg[width=150]
+image:aws.svg[width=150]
+image:red-hat.svg[width=150]
+image:docker.svg[width=150]
 
 
 
@@ -222,7 +226,7 @@ Remember to tell a nice anecdote and to make a point.
 // Video slide
 == Video
 
-video::assets/videos/toast.mp4[]
+video::toast.mp4[]
 
 
 
@@ -245,7 +249,7 @@ include::assets/code/stuff.yml[]
 [.coverimage]
 == Slide with a Background image
 
-image::assets/images/vision.jpg[background, size=cover]
+image::vision.jpg[background, size=cover]
 
 * This is a list in in a slide with a background image
 * Make your cover images wide enough (in pixels) and light enough (below 1 MB)
@@ -257,7 +261,7 @@ image::assets/images/vision.jpg[background, size=cover]
 
 == Thanks!
 
-image::assets/images/appuio.svg[]
+image::appuio.svg[]
 
 {author} – {email}
 
