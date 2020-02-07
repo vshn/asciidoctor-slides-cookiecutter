@@ -57,6 +57,17 @@ image::vshn.svg[width=250]
 
 
 
+// Multi-column slides
+[.columns]
+== !
+
+[.column]
+First column:: Do Lorem consequat veniam magna dolor dolore cupidatat et dolore ipsum amet proident.
+
+[.column]
+image::heroku.svg[width=100%]
+
+
 
 // Useful to call for attention
 == Admonition Blocks
