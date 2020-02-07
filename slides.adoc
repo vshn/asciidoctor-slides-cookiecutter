@@ -37,7 +37,7 @@
 // top of this file.
 = Title
 
-image::assets/images/vshn.png[]
+image::assets/images/vshn.svg[width=250]
 
 
 
@@ -136,6 +136,19 @@ include::assets/data/data.csv[]
 
 
 
+== Various Images
+
+More in the `assets/images` folder:
+
+image:assets/images/azure.svg[width=150]
+image:assets/images/google-cloud.svg[width=150]
+image:assets/images/slack.svg[width=150]
+
+image:assets/images/aws.svg[width=150]
+image:assets/images/red-hat.svg[width=150]
+image:assets/images/docker.svg[width=150]
+
+
 
 
 // The "!" is simply here to specify a slide without title
@@ -220,7 +233,7 @@ image::assets/images/vision.jpg[background, size=cover]
 
 == Thanks!
 
-image::assets/images/appuio.png[]
+image::assets/images/appuio.svg[]
 
 {author} – {email}
 
