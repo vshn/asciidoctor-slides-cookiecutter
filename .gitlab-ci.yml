@@ -39,7 +39,7 @@ html:
 pdf:
   stage: export
   image:
-    name: docker.io/astefanutti/decktape:2.9.2
+    name: docker.io/astefanutti/decktape:2.11.0
     entrypoint:
     - /bin/sh
     - -c
