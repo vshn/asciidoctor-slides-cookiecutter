@@ -9,5 +9,5 @@ slides.pdf: slides.html
 clean:
 	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.html/' | xargs rm -f
 	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.pdf/' | xargs rm -f
-	rm -r theme
-	rm -r node_modules
+	find . -maxdepth 1 -name 'theme' | xargs rm -rf
+	find . -maxdepth 1 -name 'node_modules' | xargs rm -rf
