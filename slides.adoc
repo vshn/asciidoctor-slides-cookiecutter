@@ -6,30 +6,14 @@
 :producer: VSHN AG
 :creator: VSHN AG
 :revnumber: 1.0
+:revdate: {docdate}
 :copyright: CC-BY-SA 3.0
 
 // Other standard Asciidoctor attributes:
 // https://asciidoctor.org/docs/user-manual/#builtin-attributes
-:revdate: {docdate}
-:imagesdir: assets/images
-:data-uri:
-:icons: font
-:icon-set: fi
-:hide-uri-scheme:
-:source-highlighter: highlightjs
-:kroki-server-url': https://vshn-kroki.appuioapp.ch
-:stem:
 
 // Reveal.js-specific attributes:
 // https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
-:revealjsdir: node_modules/reveal.js
-:revealjs_customtheme: theme/vshn.css
-:revealjs_controls: false
-:revealjs_controlsTutorial: false
-:revealjs_transition: none
-:revealjs_history: true
-:revealjs_backgroundTransition: none
-:revealjs_slideNumber: true
 
 
 
@@ -289,49 +273,3 @@ link:slides.pdf[Download this presentation as a PDF file]
 Ask your audience to download these slides!
 --
 
-
-
-
-// Blue slide footer with VSHN logo
-++++
-<div id="vshn-footer" class="footer">
-    <span class="element"><img src="assets/images/vshn_footer.png"></span>
-    <span class="element">VSHN – The DevOps Company</span>
-    <span class="element">&nbsp;</span>
-</div>
-
-<script type="text/javascript">
-window.addEventListener("load", function() {
-    revealDiv = document.querySelector("body div.reveal")
-    footer = document.getElementById("vshn-footer");
-    revealDiv.appendChild(footer);
-});
-</script>
-++++
-
-
-// Required includes for Asciinema (remove if not used)
-++++
-<link rel="stylesheet" href="node_modules/asciinema-player/resources/public/css/asciinema-player.css">
-<script src="node_modules/asciinema-player/resources/public/js/asciinema-player.js"></script>
-++++
-
-// Required includes for MathML (remove if not used)
-++++
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  messageStyle: "none",
-  tex2jax: {
-    inlineMath: [["\\(", "\\)"]],
-    displayMath: [["\\[", "\\]"]],
-    ignoreClass: "nostem|nolatexmath"
-  },
-  asciimath2jax: {
-    delimiters: [["\\$", "\\$"]],
-    ignoreClass: "nostem|noasciimath"
-  },
-  TeX: { equationNumbers: { autoNumber: "none" } }
-});
-</script>
-++++
