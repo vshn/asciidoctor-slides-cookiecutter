@@ -48,6 +48,7 @@ pdf:
     --chrome-path chromium-browser
     --chrome-arg=-no-sandbox
     --size '2560x1440'
+    --pause 2000
     --chrome-arg=--allow-file-access-from-files $(pwd)/${HTML_FILE}
     ${PDF_FILE}
   artifacts:

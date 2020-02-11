@@ -18,7 +18,7 @@ COPY --from=htmlmaker /presentation/node_modules/asciinema-player /slides/node_m
 COPY --from=htmlmaker /presentation/node_modules/reveal.js /slides/node_modules/reveal.js
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /slides/node_modules/typeface-ubuntu
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /slides/node_modules/typeface-ubuntu-mono
-RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
+RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation files
