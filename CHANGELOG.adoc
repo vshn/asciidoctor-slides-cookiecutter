@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.6 (Wed 12 Feb 2020)
+
+* Updated to latest version of builder image, using latest version of asciidoctor-revealjs
+
 == Version 1.5 (Fri 7 Feb 2020)
 
 * Simplified setup and usage with a separate Docker image

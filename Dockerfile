@@ -1,6 +1,6 @@
 # ---------- STEP 1 ----------
 # Build the HTML slides
-FROM vshn/asciidoctor-slides:1.2 as htmlmaker
+FROM vshn/asciidoctor-slides:1.3 as htmlmaker
 
 WORKDIR /presentation
 COPY assets /build/assets
