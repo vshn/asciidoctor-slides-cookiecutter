@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.8 (Wed 12 Feb 2020)
+
+* Support for offline syntax highlight styles
+
 == Version 1.7 (Wed 12 Feb 2020)
 
 * Updated to latest version of builder image, using latest version of asciidoctor-revealjs

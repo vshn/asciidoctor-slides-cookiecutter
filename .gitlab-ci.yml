@@ -11,7 +11,7 @@ variables:
 html:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.3
+    name: docker.io/vshn/asciidoctor-slides:1.4
     entrypoint:
     - /bin/sh
     - -c

@@ -249,6 +249,36 @@ include::assets/code/stuff.yml[]
 
 
 
+== Go code with callout
+
+[source,go]
+----
+package main
+
+import (
+	"fyne.io/fyne/app"
+	"fyne.io/fyne/widget"
+)
+
+func main() {
+	a := app.New() // <1>
+
+	w := a.NewWindow("Hello")
+	w.SetContent(widget.NewVBox(
+		widget.NewLabel("Hello Fyne!"),
+		widget.NewButton("Quit", func() {
+			a.Quit()
+		}),
+	))
+
+	w.ShowAndRun()
+}
+----
+
+<1> Birth of a new app
+
+
+
 
 
 [.coverimage]
