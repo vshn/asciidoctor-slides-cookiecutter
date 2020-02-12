@@ -1,8 +1,12 @@
 = Changelog
 
-== Version 1.6 (Wed 12 Feb 2020)
+== Version 1.7 (Wed 12 Feb 2020)
 
 * Updated to latest version of builder image, using latest version of asciidoctor-revealjs
+
+== Version 1.6 (Tue 11 Feb 2020)
+
+* Updated to latest version of builder image
 
 == Version 1.5 (Fri 7 Feb 2020)
 
