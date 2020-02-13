@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.8.1 (Thu 13 Feb 2020)
+
+* Added slide demoing vertically aligned columns
+
 == Version 1.8 (Wed 12 Feb 2020)
 
 * Support for offline syntax highlight styles

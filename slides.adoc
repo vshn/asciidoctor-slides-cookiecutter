@@ -41,12 +41,13 @@ image::vshn.svg[width=250]
 
 
 
-== Many columns
+[%notitle]
+== Columns aligned on top
 
 [.columns]
 ****
 [.column]
-First column:: Do Lorem consequat veniam magna dolor dolore cupidatat et dolore ipsum amet proident.
+Do Lorem consequat veniam magna dolor dolore cupidatat et dolore ipsum amet proident. Eget Cum nec, nulla ultricies vel, eu magnis eget, tellus! Nisi? Dictum penatibus pretium? Lorem ligula consectetuer Vivamus eu, nisi sociis consequat ultricies tellus.
 
 [.column]
 ********
@@ -56,6 +57,30 @@ image::heroku.svg[width=100%]
 ********
 
 ****
+
+
+
+[%notitle]
+== Centered aligned at the middle
+
+[.columns-middle]
+****
+[.column]
+image:vshn.svg[height=100]
+
+[.column]
+icon:plus[size=2x]
+
+[.column]
+image:puzzle-itc.svg[height=100]
+
+[.column]
+icon:equals[size=2x]
+
+[.column]
+image:appuio.svg[height=100]
+****
+
 
 
 
