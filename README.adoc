@@ -60,3 +60,32 @@ Run `docker-compose up --build` and open your browser at http://localhost:8080/ 
 
 TIP: Leaving out the `d` flag enables you to easily start/stop the presentation with a rebuild in between, for easier development.
 
+== LiveReload Setup
+
+The following section describes a "LiveReload" setup that works successfully, allowing the presentation author to watch the changes in the presentation without having to manually refresh the browser.
+
+=== Requirements
+
+* http://eradman.com/entrproject/[entr]
+* https://github.com/guard/guard[guard] and https://github.com/guard/guard-livereload[guard-livereload] Ruby gems (requires Ruby)
+* https://caddyserver.com/[Caddy]
+* LiveReload extension https://addons.mozilla.org/en-US/firefox/addon/livereload-web-extension/?src=search[for Firefox] or https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei[for Chrome]
+
+=== Procedure
+
+In separate terminal windows or tmux panes, launch the following commands:
+
+. `caddy` to launch the webserver
+. `ag -l | entr make slides.html`
+. `guard`
+
+Then open http://localhost:8080 in a browser with the LiveReload extension enabled.
+
+NOTE: Enabling LiveReload usually requires clicking on its corresponding button in the toolbar so that the connection is done. The terminal running `guard` should acknowledge the connection with the "INFO - Browser connected" message.
+
+Open the `slides.adoc` file in an editor and change the text:
+
+. `ag` will detect the change
+. This will trigger the `make` command
+. Which will trigger a change in the `slides.html` file
+. Which will trigger `guard` to notify the browser to refresh itself.
