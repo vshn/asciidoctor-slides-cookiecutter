@@ -2,9 +2,17 @@
 
 Fork this project to bootstrap your next presentation!
 
-**For a PDF version, visit "Jobs" in the GitLab UI, click "Download Artifacts" on the right for the export/pdf row**
+== Bootstrap
 
-== How To Use
+[source,bash]
+----
+$ git clone git@git.vshn.net:education/revealjs-template.git
+$ revealjs-template/bootstrap.sh [YOUR-PRESENTATION-NAME-HERE]
+----
+
+The script will generate a new folder with the name `[YOUR-PRESENTATION-NAME-HERE]` ready to be built with the `make` command.
+
+== Structure of a Presentation Project
 
 . The file `slides.adoc` contains a textual description of the slides.
 . The folder 'assets' contains all the resources used in the presentation (images, code snippets, etc)
@@ -34,11 +42,17 @@ TIP: Use a reverse proxy like https://ngrok.com/[ngrok] to share your slides liv
 
 == Requisites
 
-The only requirement to use this project is Docker.
+The requirements for this project are:
+
+* `git`
+* `docker`
+* `make`
 
 == Build
 
 Use the command `make` to build the presentation file. The new file `slides.html` is your presentation, to be open with any standards-compliant browser. This task also creates a `slides.pdf` file, ready to be shared.
+
+NOTE: For a PDF version, visit "Jobs" in the GitLab UI, click "Download Artifacts" on the right for the export/pdf row.
 
 == Docker
 
