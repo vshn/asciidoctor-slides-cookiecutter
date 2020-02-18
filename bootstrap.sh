@@ -11,9 +11,10 @@ echo "= CHANGELOG
 
 == Version 1.0
 
-* First version" >> CHANGELOG.adoc
+* First version
+
+TODO: Remember to update this file regularly" >> CHANGELOG.adoc
 
 echo "= $1
 
-TODO: Describe your presentation here." >> README.adoc
-
+TODO: Describe your presentation here in detail" >> README.adoc

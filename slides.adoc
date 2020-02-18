@@ -1,5 +1,4 @@
-// First and foremost:
-// Remember to change this!
+// TODO: Add your personal information
 :author: Your full name
 :doctitle: Title of the presentation
 :email: info@vshn.ch
@@ -8,6 +7,8 @@
 :revnumber: 1.0
 :revdate: {docdate}
 :copyright: CC-BY-SA 3.0
+
+// TODO: Erase instruction comments if desired
 
 // Other standard Asciidoctor attributes:
 // https://asciidoctor.org/docs/user-manual/#builtin-attributes
@@ -26,6 +27,10 @@
 
 image::vshn.svg[width=250]
 
+[.notes]
+--
+TODO: Add speaker notes using this syntax wherever needed
+--
 
 
 
@@ -151,7 +156,7 @@ IMPORTANT: This is very important
 
 Using standard latexmath:[\LaTeX] syntax:
 
-[stem] 
+[stem]
 ++++
 \sqrt{37} = \sqrt{\frac{73^2-1}{12^2}} \approx \frac{73}{12} (1 - \frac{1}{2\cdot73^2})
 ++++
@@ -193,7 +198,7 @@ include::assets/data/data.csv[]
 
 
 
-
+// TODO: Delete unused asset files from the final presentation
 == Various SVG Logos
 
 More in the `assets/images` folder:
@@ -329,6 +334,6 @@ link:slides.pdf[Download this presentation as a PDF file]
 
 [.notes]
 --
-Ask your audience to download these slides!
+TODO: Ask your audience to download these slides!
 --
 
