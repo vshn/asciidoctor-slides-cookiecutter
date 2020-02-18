@@ -89,3 +89,6 @@ Open the `slides.adoc` file in an editor and change the text:
 . This will trigger the `make` command
 . Which will trigger a change in the `slides.html` file
 . Which will trigger `guard` to notify the browser to refresh itself.
+
+TIP: You can also `ngrok http 8080` in another terminal window, to share your slides with your colleagues.
+
