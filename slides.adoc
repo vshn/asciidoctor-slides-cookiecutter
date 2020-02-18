@@ -35,7 +35,15 @@ TODO: Add speaker notes using this syntax wherever needed
 
 
 
-// This is a comment!
+// This is a single line comment!
+
+////
+This is a multiline comment!
+This is a multiline comment!
+This is a multiline comment!
+////
+
+
 == Bullet Points
 
 // Make bulletpoints appear one by one
@@ -279,8 +287,10 @@ include::assets/code/stuff.yml[]
 
 
 
+[%notitle]
 == Go code with callout
 
+[.stretch]
 [source,go]
 ----
 package main
@@ -292,21 +302,20 @@ import (
 
 func main() {
 	a := app.New() // <1>
-
 	w := a.NewWindow("Hello")
 	w.SetContent(widget.NewVBox(
 		widget.NewLabel("Hello Fyne!"),
-		widget.NewButton("Quit", func() {
+		widget.NewButton("Quit", func() { // <2>
 			a.Quit()
 		}),
 	))
-
-	w.ShowAndRun()
+	w.ShowAndRun() // <3>
 }
 ----
 
 <1> Birth of a new app
-
+<2> The magic of lambdas
+<3> Now you can see it
 
 
 

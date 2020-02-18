@@ -6,7 +6,7 @@ serve: slides.html
 	caddy
 
 slides.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.4.1 slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.4.2 slides.adoc
 
 slides.pdf: slides.html
 	docker run --rm --tty --user "$$(id -u)" --volume $$(pwd):/slides --volume $$(pwd):/home/user astefanutti/decktape:2.11.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /home/user/slides.html slides.pdf
