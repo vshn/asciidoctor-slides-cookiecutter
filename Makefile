@@ -9,7 +9,7 @@ slides.html: slides.adoc
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.4.2 slides.adoc
 
 slides.pdf: slides.html
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides --volume "$${PWD}":/home/user astefanutti/decktape:2.11.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /home/user/slides.html slides.pdf
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:2.11.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
 .PHONY: clean
 clean:
