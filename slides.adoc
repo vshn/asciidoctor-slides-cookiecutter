@@ -7,6 +7,7 @@
 :revnumber: 1.0
 :revdate: {docdate}
 :copyright: CC-BY-SA 3.0
+:title-image: vshn.svg
 
 // TODO: Uncomment the following lines if you need an APPUiO-branded presentation
 //:footer-text: APPUiO – Swiss Container Platform
@@ -14,6 +15,7 @@
 //:revealjs_customtheme: theme/appuio.css
 //:title-slide-background-image: appuio_title.svg
 //:title-slide-background-size: cover
+//:title-image: appuio.svg
 
 // TODO: Erase instruction comments if desired
 // Other standard Asciidoctor attributes:
@@ -31,7 +33,7 @@
 // top of this file.
 = Title
 
-image::vshn.svg[width=250]
+image::{title-image}[width=250]
 
 [.notes]
 --
