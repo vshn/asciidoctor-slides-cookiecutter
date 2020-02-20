@@ -1,11 +1,11 @@
 # ---------- STEP 1 ----------
 # Build the HTML slides
-FROM vshn/asciidoctor-slides:1.4.2 as htmlmaker
+FROM vshn/asciidoctor-slides:1.5 as htmlmaker
 
 WORKDIR /presentation
 COPY assets /build/assets
 COPY slides.adoc /build/slides.adoc
-RUN generate-vshn-slides slides.adoc
+RUN generate-vshn-slides --filename slides.adoc
 
 # ---------- STEP 2 ----------
 # Build the presentation in PDF format
@@ -16,8 +16,11 @@ COPY --from=htmlmaker /build/assets /slides/assets
 COPY --from=htmlmaker /presentation/theme /slides/theme
 COPY --from=htmlmaker /presentation/node_modules/asciinema-player /slides/node_modules/asciinema-player
 COPY --from=htmlmaker /presentation/node_modules/reveal.js /slides/node_modules/reveal.js
+COPY --from=htmlmaker /presentation/node_modules/highlightjs /slides/node_modules/highlightjs
+COPY --from=htmlmaker /presentation/node_modules/lato-font /slides/node_modules/lato-font
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /slides/node_modules/typeface-ubuntu
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /slides/node_modules/typeface-ubuntu-mono
+COPY --from=htmlmaker /presentation/node_modules/@fortawesome /slides/node_modules/@fortawesome
 RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
 
 # ---------- STEP 3 ----------

@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.9 (Thu 20 Feb 2020)
+
+* Adapted for new version 1.5 of slides generator, with support for APPUiO-branded slide decks.
+
 == Version 1.8.1 (Thu 13 Feb 2020)
 
 * Added slide demoing vertically aligned columns

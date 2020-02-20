@@ -8,8 +8,14 @@
 :revdate: {docdate}
 :copyright: CC-BY-SA 3.0
 
-// TODO: Erase instruction comments if desired
+// TODO: Uncomment the following lines if you need an APPUiO-branded presentation
+//:footer-text: APPUiO – Swiss Container Platform
+//:footer-image: appuio_footer.png
+//:revealjs_customtheme: theme/appuio.css
+//:title-slide-background-image: appuio_title.svg
+//:title-slide-background-size: cover
 
+// TODO: Erase instruction comments if desired
 // Other standard Asciidoctor attributes:
 // https://asciidoctor.org/docs/user-manual/#builtin-attributes
 
@@ -178,7 +184,7 @@ stem:[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}]
 
 == Horizontal Rule
 
-Use three apostrophes to insert an horizontal rule
+Use three [.line-through]#dashes# apostrophes to insert an horizontal rule
 
 '''
 

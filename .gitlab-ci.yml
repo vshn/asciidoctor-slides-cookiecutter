@@ -11,7 +11,7 @@ variables:
 html:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.4.2
+    name: docker.io/vshn/asciidoctor-slides:1.5
     entrypoint:
     - /bin/sh
     - -c
@@ -20,7 +20,7 @@ html:
   - cp -R ${ASSETS} /build/${ASSETS}
   - cp ${FILENAME} /build/${FILENAME}
   - cd /presentation
-  - generate-vshn-slides ${FILENAME}
+  - generate-vshn-slides --filename ${FILENAME}
   - cp /build/${HTML_FILE} ${CI_PROJECT_DIR}
   - cp -R /presentation/theme ${CI_PROJECT_DIR}/theme
   - cp -R /presentation/node_modules ${CI_PROJECT_DIR}/node_modules
