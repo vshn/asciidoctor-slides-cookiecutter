@@ -33,8 +33,11 @@ html:
     - theme
     - node_modules/asciinema-player
     - node_modules/reveal.js
+    - node_modules/highlightjs
+    - node_modules/lato-font
     - node_modules/typeface-ubuntu
     - node_modules/typeface-ubuntu-mono
+    - node_modules/@fortawesome
 
 pdf:
   stage: export
