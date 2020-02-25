@@ -347,6 +347,9 @@ image::appuio.svg[]
 
 {author} – {email}
 
+[.small]
+VSHN AG – Neugasse 10 – CH-8005 Zürich – +41 44 545 53 00 – https://vshn.ch – info@vshn.ch
+
 link:slides.pdf[Download this presentation as a PDF file]
 
 [.notes]
