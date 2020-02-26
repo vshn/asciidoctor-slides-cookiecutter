@@ -2,7 +2,6 @@
 # Build the HTML slides
 FROM vshn/asciidoctor-slides:1.6 as htmlmaker
 
-WORKDIR /presentation
 COPY assets /build/assets
 COPY slides.adoc /build/slides.adoc
 RUN generate-vshn-slides --filename slides.adoc
