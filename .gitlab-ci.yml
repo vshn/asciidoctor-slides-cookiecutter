@@ -16,7 +16,6 @@ html:
     - /bin/sh
     - -c
   script:
-  - mkdir /build
   - cp -R ${ASSETS} /build/${ASSETS}
   - cp ${FILENAME} /build/${FILENAME}
   - cd /presentation
