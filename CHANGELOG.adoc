@@ -1,5 +1,9 @@
 = Changelog
 
+== Version 1.10 (Tue 3 Mar 2020)
+
+* Adapted for version 1.7 of the slides generator, with support for Asciinema movie blocks and offline diagrams.
+
 == Version 1.9 (Thu 20 Feb 2020)
 
 * Adapted for new version 1.5 of slides generator, with support for APPUiO-branded slide decks.

@@ -266,9 +266,7 @@ Remember to tell a nice anecdote and to make a point.
 // Slide with Asciinema movie, available locally
 == !
 
-++++
-<asciinema-player src="assets/casts/backup.cast" cols="86" rows="21" idle-time-limit="1" poster="npt:0:40" speed="1.1" font-size="medium" theme="tango"></asciinema-player>
-++++
+asciinema::assets/casts/backup.cast[poster="npt:0:40"]
 
 
 
