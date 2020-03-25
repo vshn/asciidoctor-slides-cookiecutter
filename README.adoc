@@ -1,6 +1,6 @@
 = Reveal.js Presentation Template
 
-Fork this project to bootstrap your next presentation!
+Bootstrap your next presentation with Asciidoctor, Reveal.js and Git!
 
 == Bootstrap
 
