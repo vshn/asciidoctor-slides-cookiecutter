@@ -1,4 +1,6 @@
 :8080
-index slides.html
-tls off
+file_server {
+    index slides.html
+}
+encode zstd gzip
 
