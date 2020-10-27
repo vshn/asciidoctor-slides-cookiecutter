@@ -69,7 +69,7 @@ The following section describes a "LiveReload" setup that works successfully, al
 
 In separate terminal windows or tmux panes, launch the following commands:
 
-. `caddy` to launch the webserver
+. `caddy start` to launch the webserver
 . `ag -l | entr make slides.html` to rebuild the slides on every change
 . `guard` to refresh the browser on every change via LiveReload
 
