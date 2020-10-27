@@ -1,0 +1,87 @@
+= {{cookiecutter.presentation_title}}
+
+Author: {{cookiecutter.author_name}} ({{cookiecutter.author_email}})
+
+== About this Presentation
+
+TODO: Describe your presentation here in detail
+
+== Structure of this Presentation Project
+
+. The file `slides.adoc` contains a textual description of the slides.
+. The folder 'assets' contains all the resources used in the presentation (images, code snippets, etc)
+. Use Asciidoctor variables to configure the title and author at the top of the document.
+. Separate slides with `==` titles.
+** Please refer to the `slides.adoc` file provided for examples like bulleted lists, images, videos, source code, and Asciinema movies.
+. The `Makefile` knows how to make the HTML or the PDF file; just type `make slides.html` or `make slides.pdf` while you are working.
+
+NOTE: The speaker notes can be seen by hitting the `S` key in your keyboard while the slides are showing on the browser.
+
+== Browser Compatibility
+
+This project provides the same visual experience in any modern browser. It has been tested with:
+
+* All Platforms:
+** Chrome
+** Opera
+** Firefox
+* Microsoft Windows:
+** Edge
+* Apple macOS:
+** Safari
+
+All browsers display the same visuals, including the default VSHN font, movies and other features.
+
+TIP: Use a reverse proxy like https://ngrok.com/[ngrok] to share your slides live with your audience!
+
+== Requirements
+
+The requirements for this project are:
+
+* `git`
+* `docker`
+* `make`
+
+== Build
+
+Use the command `make` to build the presentation file. The new file `slides.html` is your presentation, to be open with any standards-compliant browser. This task also creates a `slides.pdf` file, ready to be shared.
+
+NOTE: For a PDF version, visit "Jobs" in the GitLab UI, click "Download Artifacts" on the right for the export/pdf row.
+
+== Docker
+
+Run `docker-compose up --build` and open your browser at http://localhost:8080/ to see the presentation. The PDF slides are located at the URL http://localhost:8080/slides.pdf ready to be downloaded.
+
+TIP: Leaving out the `d` flag enables you to easily start/stop the presentation with a rebuild in between, for easier development.
+
+== LiveReload Setup
+
+The following section describes a "LiveReload" setup that works successfully, allowing the presentation author to watch the changes in the presentation without having to manually refresh the browser.
+
+=== Requirements
+
+* http://eradman.com/entrproject/[entr]
+* https://github.com/guard/guard[guard] and https://github.com/guard/guard-livereload[guard-livereload] Ruby gems (requires Ruby)
+* https://caddyserver.com/[Caddy]
+* LiveReload extension https://addons.mozilla.org/en-US/firefox/addon/livereload-web-extension/?src=search[for Firefox] or https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei[for Chrome]
+
+=== Procedure
+
+In separate terminal windows or tmux panes, launch the following commands:
+
+. `caddy` to launch the webserver
+. `ag -l | entr make slides.html` to rebuild the slides on every change
+. `guard` to refresh the browser on every change via LiveReload
+
+Then open http://localhost:8080 in a browser with the LiveReload extension enabled.
+
+NOTE: Enabling LiveReload usually requires clicking on its corresponding button in the toolbar so that the connection is done. The terminal running `guard` should acknowledge the connection with the "INFO - Browser connected" message.
+
+Open the `slides.adoc` file in an editor and change the text:
+
+. `ag` will detect the change
+. This will trigger the `make` command
+. Which will trigger a change in the `slides.html` file
+. Which will trigger `guard` to notify the browser to refresh itself.
+
+TIP: You can also `ngrok http 8080` in another terminal window, to share your slides with your colleagues as you work on them.

@@ -1,5 +1,10 @@
 = Changelog
 
+== Version 2.0 (Tue 27 Oct 2020)
+
+* Migrated project to be a Cookiecutter template.
+* Updated versions of Asciidoctor-Revealjs and Decktape.
+
 == Version 1.11 (Tue 3 Mar 2020)
 
 * Adapted for version 1.7 of the slides generator, with support for Asciinema movie blocks and offline diagrams.

@@ -1,0 +1,7 @@
+{
+    "presentation_title": "Title of the presentation",
+    "presentation_folder_name": "{{ cookiecutter.presentation_title | slugify }}",
+    "presentation_theme": ["vshn", "appuio"],
+    "author_name": "VSHNeer",
+    "author_email": "info@vshn.ch"
+}

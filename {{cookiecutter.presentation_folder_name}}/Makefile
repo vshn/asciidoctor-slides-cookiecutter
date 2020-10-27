@@ -11,6 +11,10 @@ slides.html: slides.adoc
 slides.pdf: slides.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
+.PHONY: docker
+docker: slides.pdf
+	docker build -t {{cookiecutter.presentation_folder_name}}:1.0 .
+
 .PHONY: clean
 clean:
 	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.html/' | xargs rm -f

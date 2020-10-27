@@ -1,22 +1,30 @@
-// TODO: Add your personal information
-:author: Your full name
-:doctitle: Title of the presentation
-:email: info@vshn.ch
+:author: {{cookiecutter.author_name}}
+:doctitle: {{cookiecutter.presentation_title}}
+:email: {{cookiecutter.author_email}}
 :producer: VSHN AG
 :creator: VSHN AG
 :revnumber: 1.0
 :revdate: {docdate}
 :copyright: CC-BY-SA 3.0
+
+{% if cookiecutter.presentation_theme == "vshn" %}
+
+:footer-text: VSHN – The DevOps Company
+:footer-image: vshn_footer.png
+:revealjs_customtheme: theme/vshn.css
 :title-image: vshn.svg
 
+{% elif cookiecutter.presentation_theme == "appuio" %}
 
-// TODO: Uncomment the following lines if you need an APPUiO-branded presentation
-//:footer-text: APPUiO – Swiss Container Platform
-//:footer-image: appuio_footer.png
-//:revealjs_customtheme: theme/appuio.css
-//:title-slide-background-image: appuio_title.svg
-//:title-slide-background-size: cover
-//:title-image: appuio.svg
+:footer-text: APPUiO – Swiss Container Platform
+:footer-image: appuio_footer.png
+:revealjs_customtheme: theme/appuio.css
+:title-slide-background-image: appuio_title.svg
+:title-slide-background-size: cover
+:title-image: appuio.svg
+
+{% endif %}
+
 
 // TODO: Erase instruction comments if desired
 // Other standard Asciidoctor attributes:
@@ -37,11 +45,10 @@
 
 image::{title-image}[width=250]
 
-// These are speaker notes; hit "S" while the presentation is showing
-// so that they appear in a separate browser window.
+
 [.notes]
 --
-TODO: Add speaker notes using this syntax wherever needed
+TODO: These are speaker notes; hit "S" while the presentation is showing so that they appear in a separate browser window. Add speaker notes using this block wherever needed, to help you deliver your presentation.
 --
 
 
@@ -57,6 +64,7 @@ This is a multiline comment!
 
 
 
+
 == Bullet Points
 
 // Make bulletpoints appear one by one with the [%step] attribute
@@ -64,6 +72,7 @@ This is a multiline comment!
 * Foo
 * Bar
 * World
+
 
 
 
@@ -85,6 +94,7 @@ Cupidatat deserunt sunt incididunt ad commodo consectetur ea consectetur.
 
 image::heroku.svg[width=100%]
 --
+
 
 
 
@@ -121,6 +131,7 @@ image:appuio.svg[]
 
 
 
+
 == Admonition Blocks
 
 // Admonition blocks are useful to call for attention
@@ -136,8 +147,13 @@ CAUTION: You have been warned
 IMPORTANT: This is very important
 
 
+
+// This weird syntax makes a single slide with a YouTube video in the background
+// You can actually embed any website into this slide, and it'll be rendered
+// This feature does require a network connection during the presentation!
 [%notitle,background-iframe="https://www.youtube.com/embed/LaApqL4QjH8?rel=0&start=3&enablejsapi=1&autoplay=1&loop=1&controls=0&modestbranding=1"]
 == YouTube Video in background
+
 
 
 
@@ -149,6 +165,7 @@ IMPORTANT: This is very important
 . First
 . Second
 . First
+
 
 
 
@@ -191,6 +208,8 @@ IMPORTANT: This is very important
 
 
 
+
+
 == Math Equations
 
 Using standard latexmath:[\LaTeX] syntax:
@@ -207,11 +226,13 @@ stem:[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}]
 
 
 
+
 == Horizontal Rules
 
 Use three apostrophes `'''` to insert an horizontal rule:
 
 '''
+
 
 
 
@@ -227,12 +248,14 @@ Strikeout [.line-through]#entire phrases# using [.line-through]#dashes#:
 
 
 
+
 == Definition List
 
 // Useful when explaining technical terms
 
 Thing:: A thing is defined here
 Another Thing:: Another thing is defined here
+
 
 
 
@@ -384,7 +407,7 @@ image::vision.jpg[background, size=cover]
 
 == Thanks!
 
-image::appuio.svg[]
+image::{title-image}[width=250]
 
 {author} – {email}
 
