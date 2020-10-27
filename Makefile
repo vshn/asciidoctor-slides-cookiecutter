@@ -6,10 +6,10 @@ serve: slides.html
 	caddy
 
 slides.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.7 --filename slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.8 --filename slides.adoc
 
 slides.pdf: slides.html
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:2.11.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
 .PHONY: clean
 clean:
