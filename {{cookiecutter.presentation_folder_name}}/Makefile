@@ -1,9 +1,9 @@
 .PHONY: all
 all: slides.html slides.pdf
 
-.PHONY: serve
-serve: slides.html
-	caddy
+.PHONY: preview
+preview: slides.adoc
+	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.8
 
 slides.html: slides.adoc
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.8 --filename slides.adoc
@@ -17,7 +17,9 @@ docker: slides.pdf
 
 .PHONY: clean
 clean:
-	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.html/' | xargs rm -f
-	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.pdf/' | xargs rm -f
-	find . -maxdepth 1 -name 'theme' | xargs rm -rf
+	find . -maxdepth 1 -name 'Caddyfile' | xargs rm -f; \
+	find . -maxdepth 1 -name 'Guardfile' | xargs rm -f; \
+	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.html/' | xargs rm -f; \
+	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.pdf/' | xargs rm -f; \
+	find . -maxdepth 1 -name 'theme' | xargs rm -rf; \
 	find . -maxdepth 1 -name 'node_modules' | xargs rm -rf

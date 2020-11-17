@@ -60,28 +60,17 @@ The following section describes a "LiveReload" setup that works successfully, al
 
 === Requirements
 
-* http://eradman.com/entrproject/[entr]
-* https://github.com/guard/guard[guard] and https://github.com/guard/guard-livereload[guard-livereload] Ruby gems (requires Ruby)
-* https://caddyserver.com/[Caddy]
-* LiveReload extension https://addons.mozilla.org/en-US/firefox/addon/livereload-web-extension/?src=search[for Firefox] or https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei[for Chrome]
+* Docker
+* A web browser with the LiveReload extension https://addons.mozilla.org/en-US/firefox/addon/livereload-web-extension/?src=search[for Firefox] or https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei[for Chrome]
 
 === Procedure
 
-In separate terminal windows or tmux panes, launch the following commands:
+. Launch this command: `make preview`
+. Open http://localhost:2020 in a browser with the LiveReload extension enabled.
 
-. `caddy start` to launch the webserver
-. `ag -l | entr make slides.html` to rebuild the slides on every change
-. `guard` to refresh the browser on every change via LiveReload
+NOTE: Enabling LiveReload usually requires clicking on its corresponding button in the toolbar so that the connection is done. The terminal running `make preview` should acknowledge the connection with the "INFO - Browser connected" message.
 
-Then open http://localhost:8080 in a browser with the LiveReload extension enabled.
+Open the `slides.adoc` file in an editor and change the text: a few moments later, the changes are visible in the browser.
 
-NOTE: Enabling LiveReload usually requires clicking on its corresponding button in the toolbar so that the connection is done. The terminal running `guard` should acknowledge the connection with the "INFO - Browser connected" message.
+TIP: You can also `ngrok http 2020` in another terminal window, to share your slides with your colleagues as you work on them.
 
-Open the `slides.adoc` file in an editor and change the text:
-
-. `ag` will detect the change
-. This will trigger the `make` command
-. Which will trigger a change in the `slides.html` file
-. Which will trigger `guard` to notify the browser to refresh itself.
-
-TIP: You can also `ngrok http 8080` in another terminal window, to share your slides with your colleagues as you work on them.

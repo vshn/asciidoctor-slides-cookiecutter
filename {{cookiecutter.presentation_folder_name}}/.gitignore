@@ -3,3 +3,6 @@ theme
 node_modules
 slides.html
 slides.pdf
+Caddyfile
+Guardfile
+
