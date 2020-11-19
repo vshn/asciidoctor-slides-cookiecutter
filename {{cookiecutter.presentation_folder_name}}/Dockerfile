@@ -24,7 +24,7 @@ RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation files
-FROM vshn/nginx:1.0
+FROM vshn/nginx:1.18.0
 
 # Finally, copy the contents of the presentation to be served
 COPY --from=htmlmaker /build/slides.html /usr/share/nginx/html/index.html
