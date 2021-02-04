@@ -1,12 +1,27 @@
 stages:
 - render
 - export
+- build
 
 variables:
   FILENAME: slides.adoc
   HTML_FILE: slides.html
   PDF_FILE: slides.pdf
   ASSETS: assets
+
+container:
+  stage: build
+  image: docker:stable
+  services:
+    - docker:dind
+  tags:
+    - dockerbuild
+  script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+    - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_TAG" .
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_TAG"
+  only:
+    - tags
 
 html:
   stage: render
