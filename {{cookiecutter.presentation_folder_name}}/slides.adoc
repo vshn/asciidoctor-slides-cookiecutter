@@ -10,7 +10,7 @@
 {% if cookiecutter.presentation_theme == "vshn" %}
 
 :footer-text: VSHN – The DevOps Company
-:footer-image: vshn_footer.png
+:footer-image: vshn.svg
 :revealjs_customtheme: theme/vshn.css
 :title-image: vshn.svg
 
@@ -306,8 +306,8 @@ More icons here: https://fontawesome.com/icons?d=gallery&m=free
 
 
 
-[background-color="black"]
-== Black Background
+[background-color="darkdrey"]
+== Dark Grey Background
 
 // Any CSS color will do the trick
 

@@ -3,10 +3,10 @@ all: slides.html slides.pdf
 
 .PHONY: preview
 preview: slides.adoc
-	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.10
+	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.11
 
 slides.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.9 --filename slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.10 --filename slides.adoc
 
 slides.pdf: slides.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
