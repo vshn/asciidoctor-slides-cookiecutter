@@ -12,6 +12,8 @@
 :footer-text: VSHN – The DevOps Company
 :footer-image: vshn.svg
 :revealjs_customtheme: theme/vshn.css
+:title-slide-background-image: vshn-title-background.svg
+:title-slide-background-size: cover
 :title-image: vshn.svg
 
 {% elif cookiecutter.presentation_theme == "appuio" %}
