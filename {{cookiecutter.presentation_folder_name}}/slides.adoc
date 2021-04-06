@@ -306,7 +306,7 @@ More icons here: https://fontawesome.com/icons?d=gallery&m=free
 
 
 
-[background-color="darkdrey"]
+[background-color="#404040"]
 == Dark Grey Background
 
 // Any CSS color will do the trick
