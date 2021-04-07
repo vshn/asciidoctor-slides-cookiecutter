@@ -26,7 +26,7 @@ container:
 html:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.9
+    name: docker.io/vshn/asciidoctor-slides:1.10
     entrypoint:
     - /bin/sh
     - -c
