@@ -20,6 +20,7 @@ COPY --from=htmlmaker /presentation/node_modules/lato-font /slides/node_modules/
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /slides/node_modules/typeface-ubuntu
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /slides/node_modules/typeface-ubuntu-mono
 COPY --from=htmlmaker /presentation/node_modules/@fortawesome /slides/node_modules/@fortawesome
+COPY --from=htmlmaker /presentation/node_modules/@fontsource /slides/node_modules/@fontsource
 RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
 
 # ---------- STEP 3 ----------
@@ -37,4 +38,5 @@ COPY --from=htmlmaker /presentation/node_modules/lato-font /usr/share/nginx/html
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /usr/share/nginx/html/node_modules/typeface-ubuntu
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /usr/share/nginx/html/node_modules/typeface-ubuntu-mono
 COPY --from=htmlmaker /presentation/node_modules/@fortawesome /usr/share/nginx/html/node_modules/@fortawesome
+COPY --from=htmlmaker /presentation/node_modules/@fontsource /usr/share/nginx/html/node_modules/@fontsource
 COPY --from=pdfmaker /slides/slides.pdf /usr/share/nginx/html/slides.pdf
