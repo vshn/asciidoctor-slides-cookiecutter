@@ -21,7 +21,7 @@ COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu /slides/node_mo
 COPY --from=htmlmaker /presentation/node_modules/typeface-ubuntu-mono /slides/node_modules/typeface-ubuntu-mono
 COPY --from=htmlmaker /presentation/node_modules/@fortawesome /slides/node_modules/@fortawesome
 COPY --from=htmlmaker /presentation/node_modules/@fontsource /slides/node_modules/@fontsource
-RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '2560x1440' --pause 2000 --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
+RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-sandbox --size '1920x1080' --pause 2000 --chrome-arg=--allow-file-access-from-files /slides/slides.html /slides/slides.pdf
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation files
