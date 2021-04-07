@@ -52,6 +52,7 @@ html:
     - node_modules/typeface-ubuntu
     - node_modules/typeface-ubuntu-mono
     - node_modules/@fortawesome
+    - node_modules/@fontsource
 
 pdf:
   stage: export
