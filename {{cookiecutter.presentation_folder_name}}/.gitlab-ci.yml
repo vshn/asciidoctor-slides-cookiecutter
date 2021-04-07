@@ -26,7 +26,7 @@ container:
 html:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.9
+    name: docker.io/vshn/asciidoctor-slides:1.10
     entrypoint:
     - /bin/sh
     - -c
@@ -65,7 +65,7 @@ pdf:
   - node /decktape/decktape.js
     --chrome-path chromium-browser
     --chrome-arg=-no-sandbox
-    --size '2560x1440'
+    --size '1920x1080'
     --pause 2000
     --chrome-arg=--allow-file-access-from-files $(pwd)/${HTML_FILE}
     ${PDF_FILE}
