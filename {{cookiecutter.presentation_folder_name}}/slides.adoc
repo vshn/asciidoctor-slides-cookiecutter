@@ -29,11 +29,18 @@
 
 
 // TODO: Erase instruction comments if desired
+
 // Other standard Asciidoctor attributes:
-// https://asciidoctor.org/docs/user-manual/#builtin-attributes
+// https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-reference/
 
 // Reveal.js-specific attributes:
-// https://asciidoctor.org/docs/asciidoctor-revealjs/#reveal-js-options
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
+
+// Uncomment if you would like to include the speaker notes in your slides (useful for PDF export):
+// :revealjs_showNotes:
+
+// Specify total time (in seconds) for presentation:
+// :revealjs_totalTime: 1800
 
 
 
