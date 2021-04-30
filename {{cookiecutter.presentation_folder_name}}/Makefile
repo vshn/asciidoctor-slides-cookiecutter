@@ -6,13 +6,13 @@ preview: slides.adoc
 	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.12
 
 slides.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.12 --filename slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.11 --filename slides.adoc
 
 slides.pdf: slides.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --pause 2000 --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
 slides-with-notes.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.12 --filename --show-notes --output slides-with-notes.html  slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.11 --filename --show-notes --output slides-with-notes.html  slides.adoc
 
 slides-with-notes.pdf: slides-with-notes.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --pause 2000 --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
