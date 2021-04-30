@@ -36,10 +36,9 @@
 // Reveal.js-specific attributes:
 // https://docs.asciidoctor.org/reveal.js-converter/latest/converter/revealjs-options/
 
-// Uncomment if you would like to include the speaker notes in your slides (useful for PDF export):
-// :revealjs_showNotes:
 
-// Specify total time (in seconds) for presentation:
+// Specify total time (in seconds) for presentation
+// (used to calculate time in speaker notes timer)
 // :revealjs_totalTime: 1800
 
 
