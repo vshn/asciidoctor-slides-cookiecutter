@@ -41,6 +41,8 @@
 // (used to calculate time in speaker notes timer)
 // :revealjs_totalTime: 1800
 
+// Remove progress bar at the bottom of slides
+// :revealjs_progress: false
 
 
 
