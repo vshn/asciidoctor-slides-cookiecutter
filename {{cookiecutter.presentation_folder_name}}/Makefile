@@ -31,7 +31,8 @@ docker: slides.pdf
 clean:
 	find . -maxdepth 1 -name 'Caddyfile' | xargs rm -f; \
 	find . -maxdepth 1 -name 'Guardfile' | xargs rm -f; \
-	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.html/' | xargs rm -f; \
-	find . -maxdepth 1 -name '*.adoc' | sed 's/.adoc$$/.pdf/' | xargs rm -f; \
+	find . -maxdepth 1 -name '*.html' | xargs rm -f; \
+	find . -maxdepth 1 -name '*.pdf' | xargs rm -f; \
 	find . -maxdepth 1 -name 'theme' | xargs rm -rf; \
 	find . -maxdepth 1 -name 'node_modules' | xargs rm -rf
+
