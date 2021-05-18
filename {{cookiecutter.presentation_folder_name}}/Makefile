@@ -17,6 +17,12 @@ slides-with-notes.html: slides.adoc
 slides-with-notes.pdf: slides-with-notes.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --pause 2000 --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
 
+# This target lists the images actually used in the final presentation;
+# all other images can be removed.
+.PHONY: images
+images: slides.html
+	sed -n '/<img/s/.*src="\([^"]*\)".*/\1/p' slides.html | sort | uniq
+
 .PHONY: docker
 docker: slides.pdf
 	docker build -t {{cookiecutter.presentation_folder_name}}:1.0 .
