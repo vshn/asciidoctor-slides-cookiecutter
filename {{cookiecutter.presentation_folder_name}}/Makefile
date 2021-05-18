@@ -19,8 +19,8 @@ slides-with-notes.pdf: slides-with-notes.html
 
 # This target lists the images actually used in the final presentation;
 # all other images can be removed.
-.PHONY: images
-images: slides.html
+.PHONY: used_images
+used_images: slides.html
 	sed -n '/<img/s/.*src="\([^"]*\)".*/\1/p' slides.html | sort | uniq
 
 .PHONY: docker
