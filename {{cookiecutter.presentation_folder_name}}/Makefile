@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 .PHONY: all
 all: slides.html slides.pdf
 
@@ -17,11 +19,16 @@ slides-with-notes.html: slides.adoc
 slides-with-notes.pdf: slides-with-notes.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --pause 2000 --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
 
-# This target lists the images actually used in the final presentation;
-# all other images can be removed.
-.PHONY: used_images
-used_images: slides.html
-	sed -n '/<img/s/.*src="\([^"]*\)".*/\1/p' slides.html | sort | uniq
+# This target lists the images not used in the final presentation,
+# and which could be removed. This command requires `ag` installed:
+# https://github.com/ggreer/the_silver_searcher
+.PHONY: unused_images
+unused_images:
+	@for file in assets/images/* ; do \
+		if ! ag $${file##*/} > /dev/null; then \
+			echo $$file; \
+		fi; \
+	done;
 
 .PHONY: docker
 docker: slides.pdf
