@@ -25,7 +25,7 @@ slides-with-notes.pdf: slides-with-notes.html
 .PHONY: unused_images
 unused_images:
 	@for file in assets/images/* ; do \
-		if ! ag $${file##*/} > /dev/null; then \
+		if ! ag -U $${file##*/} > /dev/null; then \
 			echo $$file; \
 		fi; \
 	done;
