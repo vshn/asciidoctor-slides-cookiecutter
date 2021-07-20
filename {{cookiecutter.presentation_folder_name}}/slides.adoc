@@ -118,7 +118,7 @@ image:crossplane.svg[height=40] &nbsp; image:docker.svg[height=35] &nbsp; image:
 
 [.notes]
 --
-We're partners of many companies very active in the Cloud Native space, you might recognize some of the logos on this slide.
+We're partners with many companies very active in the Cloud Native space, you might recognize some of the logos on this slide.
 --
 
 
