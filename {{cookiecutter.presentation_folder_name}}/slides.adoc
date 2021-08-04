@@ -76,8 +76,11 @@ This is a multiline comment!
 
 
 
-// ----- VSHN Introduction Slides (remove if not needed) -----
+// ----- VSHN Introduction Slides -----
+// Comment or remove the attribute below to remove the VSHN intro slides
+:vshn-intro:
 
+ifdef::vshn-intro[]
 == image:vshn.svg[height=100]
 
 [%step]
@@ -141,6 +144,7 @@ image::k8up.svg[]
 We also run our own "Platform as a Service" offering called "APPUiO". We've created our own suite of tools to manage lots of Kubernetes services from a central location, called "Project Syn". Last but not least, we have developed our own Kubernetes operator for backups, called K8up, which just like Project Syn is 100% open source on GitHub.
 --
 
+endif::vshn-intro[]
 // ----- End of VSHN Presentation slides -----
 
 
