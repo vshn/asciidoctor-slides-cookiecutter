@@ -63,19 +63,6 @@ TODO: These are speaker notes; hit "S" while the presentation is showing so that
 
 
 
-
-// This is a single line comment!
-
-////
-This is a multiline comment!
-This is a multiline comment!
-This is a multiline comment!
-////
-
-
-
-
-
 // ----- VSHN Introduction Slides -----
 // Comment or remove the attribute below to remove the VSHN intro slides
 :vshn-intro:
@@ -152,6 +139,14 @@ endif::vshn-intro[]
 
 
 {% if cookiecutter.include_sample_slides == "yes" %}
+
+// This is a single line comment!
+
+////
+This is a multiline comment!
+This is a multiline comment!
+This is a multiline comment!
+////
 
 
 
