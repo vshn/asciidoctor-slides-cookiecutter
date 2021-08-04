@@ -158,12 +158,32 @@ We also run our own "Platform as a Service" offering called "APPUiO". We've crea
 
 
 
+
+== Step by Step Elements
+
+// Lots of transitions available in the documentation
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/fragment/#step-style
+
+[.fade-right,step=3]
+Finally, a pro tip...
+
+[.highlight-current-blue,step=1]
+First, watch out for...
+
+[.grow,step=2]
+Second, don't forget...
+
+
+
+
+
+
 [.columns]
 [%notitle]
 == Columns aligned on top
 
 // Learn more about column layout:
-// https://asciidoctor.org/docs/asciidoctor-revealjs/#columns-layout
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/#columns-layout
 
 [.column]
 --
