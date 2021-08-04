@@ -151,6 +151,10 @@ endif::vshn-intro[]
 
 
 
+{% if cookiecutter.include_sample_slides == "yes" %}
+
+
+
 == Bullet Points
 
 // Make bulletpoints appear one by one with the [%step] attribute
@@ -507,6 +511,7 @@ image::vision.jpg[background, size=cover]
 * Make your cover images wide enough (in pixels) and light enough (below 1 MB)
 
 
+{% endif %}
 
 
 
