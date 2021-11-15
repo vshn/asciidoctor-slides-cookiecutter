@@ -23,9 +23,9 @@ slides-with-notes.pdf: slides-with-notes.html
 # and which could be removed. This command requires `ag` installed:
 # https://github.com/ggreer/the_silver_searcher
 .PHONY: unused_images
-unused_images:
+unused_images: slides.html
 	@for file in assets/images/* ; do \
-		if ! ag -U $${file##*/} > /dev/null; then \
+		if ! ag -U $${file##*/} slides.html > /dev/null; then \
 			echo $$file; \
 		fi; \
 	done;
