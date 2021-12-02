@@ -90,7 +90,7 @@ html:
 pdf-with-notes:
   stage: export
   image:
-    name: docker.io/astefanutti/decktape:3.1.0
+    name: docker.io/astefanutti/decktape:3.4.0
     entrypoint:
     - /bin/sh
     - -c
@@ -110,7 +110,7 @@ pdf-with-notes:
 pdf:
   stage: export
   image:
-    name: docker.io/astefanutti/decktape:3.1.0
+    name: docker.io/astefanutti/decktape:3.4.0
     entrypoint:
     - /bin/sh
     - -c

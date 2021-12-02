@@ -11,13 +11,13 @@ slides.html: slides.adoc
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.11 --filename slides.adoc
 
 slides.pdf: slides.html
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
 slides-with-notes.html: slides.adoc
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.11 --filename slides.adoc --show-notes --output slides-with-notes.html
 
 slides-with-notes.pdf: slides-with-notes.html
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.1.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
 
 # This target lists the images not used in the final presentation,
 # and which could be removed. This command requires `ag` installed:
