@@ -5,7 +5,7 @@ all: slides.html slides.pdf
 
 .PHONY: preview
 preview: slides.adoc
-	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.12
+	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.13
 
 slides.html: slides.adoc
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.12 --filename slides.adoc
