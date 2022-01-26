@@ -28,7 +28,7 @@ container:
 html-with-notes:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.12
+    name: docker.io/vshn/asciidoctor-slides:1.13
     entrypoint:
     - /bin/sh
     - -c
@@ -59,7 +59,7 @@ html-with-notes:
 html:
   stage: render
   image:
-    name: docker.io/vshn/asciidoctor-slides:1.12
+    name: docker.io/vshn/asciidoctor-slides:1.13
     entrypoint:
     - /bin/sh
     - -c
