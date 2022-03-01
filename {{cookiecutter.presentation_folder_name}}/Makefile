@@ -20,12 +20,11 @@ slides-with-notes.pdf: slides-with-notes.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
 
 # This target lists the images not used in the final presentation,
-# and which could be removed. This command requires `ag` installed:
-# https://github.com/ggreer/the_silver_searcher
+# and which could be removed.
 .PHONY: unused_images
 unused_images: slides.html
 	@for file in assets/images/* ; do \
-		if ! ag -U $${file##*/} slides.html > /dev/null; then \
+		if ! grep -U $${file##*/} slides.html > /dev/null; then \
 			echo $$file; \
 		fi; \
 	done;
