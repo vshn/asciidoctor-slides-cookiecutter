@@ -1,0 +1,19 @@
+[%notitle]
+== Partnerships
+
+image:gitlab.svg[height=35] &nbsp; image:rancher.svg[height=25]
+
+image:exoscale.svg[height=35] &nbsp; image:cloudscale.png[height=20]
+
+image:google.svg[height=35] &nbsp; image:kubernetes.svg[height=35]
+
+image:red-hat.svg[height=35] &nbsp; image:openshift.svg[height=45]
+
+image:microsoft.svg[height=35] &nbsp; image:azure.svg[height=35]
+
+image:crossplane.svg[height=40] &nbsp; image:docker.svg[height=35] &nbsp; image:nginx.svg[height=35]
+
+[.notes]
+--
+We're partners with many companies very active in the Cloud Native space, you might recognize some of the logos on this slide.
+--

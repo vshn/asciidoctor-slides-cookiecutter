@@ -1,0 +1,8 @@
+== Speaker Nodes
+
+Hit the kbd:[S] key to see the presenter screen, showing your notes.
+
+[.notes]
+--
+TODO: These are speaker notes; hit "S" while the presentation is showing so that they appear in a separate browser window. Add speaker notes using this block wherever needed, to help you deliver your presentation.
+--

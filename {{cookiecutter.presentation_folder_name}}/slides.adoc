@@ -56,10 +56,6 @@
 image::{title-image}[width=250]
 
 
-[.notes]
---
-TODO: These are speaker notes; hit "S" while the presentation is showing so that they appear in a separate browser window. Add speaker notes using this block wherever needed, to help you deliver your presentation.
---
 
 
 
@@ -72,71 +68,25 @@ TODO: These are speaker notes; hit "S" while the presentation is showing so that
 // Refer to the `Makefile` to see how this is used.
 ifndef::slides-pdf-export[]
 
-== image:vshn.svg[height=100]
+include::presentation_slides/vshn.adoc[]
 
-[%step]
-* Pronounced ˈvɪʒn – like "vision"
-* _The DevOps Company_
-* Founded 2014, 49 VSHNeers located in Zürich
-* Switzerland's leading DevOps, Docker & Kubernetes partner
-* 24/7 support
-* ISO 27001 certified
-* ISAE 3402 Report Type 1 verified
-* First Swiss Kubernetes Certified Service Provider
+include::presentation_slides/partnerships.adoc[]
 
-[.notes]
---
-Just a few words about VSHN; that's how you pronounce the name, and we're "The DevOps Company". We've been in Zurich since 2014, we're 49 VSHNeers and we're Switzerland's leading DevOps, Docker & Kubernetes partner, offering 24/7 support to our customers. We've got a few certifications, and most importantly, we were the First Swiss Kubernetes Certified Service Provider back in 2016.
---
-
-
-
-
-
-[%notitle]
-== Partnerships
-
-image:gitlab.svg[height=35] &nbsp; image:rancher.svg[height=25]
-
-image:exoscale.svg[height=35] &nbsp; image:cloudscale.png[height=20]
-
-image:google.svg[height=35] &nbsp; image:kubernetes.svg[height=35]
-
-image:red-hat.svg[height=35] &nbsp; image:openshift.svg[height=45]
-
-image:microsoft.svg[height=35] &nbsp; image:azure.svg[height=35]
-
-image:crossplane.svg[height=40] &nbsp; image:docker.svg[height=35] &nbsp; image:nginx.svg[height=35]
-
-[.notes]
---
-We're partners with many companies very active in the Cloud Native space, you might recognize some of the logos on this slide.
---
-
-
-
-
-
-
-
-[%notitle]
-== Our Products
-
-image::appuio.svg[height=200]
-
-image::project-syn.svg[]
-
-image::k8up.svg[]
-
-[.notes]
---
-We also run our own "Platform as a Service" offering called "APPUiO". We've created our own suite of tools to manage lots of Kubernetes services from a central location, called "Project Syn". Last but not least, we have developed our own Kubernetes operator for backups, called K8up, which just like Project Syn is 100% open source on GitHub.
---
+include::presentation_slides/products.adoc[]
 
 endif::[]
+
 // End of VSHN Presentation slides
 {% endif %}
 
+
+
+== Agenda
+
+. Introduction
+. Presentation
+. Conclusion
+. Questions
 
 
 
@@ -148,6 +98,10 @@ image::{title-image}[width=250]
 
 [.small]
 VSHN AG – Neugasse 10 – CH-8005 Zürich – +41 44 545 53 00 – https://vshn.ch – info@vshn.ch
+
+
+
+== Questions?
 
 
 
@@ -186,6 +140,8 @@ include::sample_slides/horizontal_rule.adoc[]
 include::sample_slides/math.adoc[]
 
 include::sample_slides/numbered_list.adoc[]
+
+include::sample_slides/speaker_notes.adoc[]
 
 include::sample_slides/step_by_step.adoc[]
 
