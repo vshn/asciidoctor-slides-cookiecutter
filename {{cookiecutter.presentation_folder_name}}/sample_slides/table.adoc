@@ -1,0 +1,12 @@
+[%notitle]
+== Table
+
+[cols="h,d,d,d",options="header"]
+|===
+|             | Local Docker | Image Repo | Base Image
+| OpenFaaS    | Required     | Required   | Required
+| Fn Project  | Required     | Required   | Required
+| Fission     | None         | None       | Required
+| OpenWhisk   | None         | None       | None
+| Kubeless    | None         | None       | None
+|===

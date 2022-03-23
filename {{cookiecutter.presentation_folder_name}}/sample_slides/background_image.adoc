@@ -1,0 +1,7 @@
+[.coverimage]
+== Slide with a Background image
+
+image::vision.jpg[background, size=cover]
+
+* This is a list in in a slide with a background image
+* Make your cover images wide enough (in pixels) and light enough (below 1 MB)

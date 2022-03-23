@@ -1,0 +1,8 @@
+== Table
+
+// Super easy to present tabular data stored in a CSV file
+
+[cols="h,d,d,d",options="header",format=csv]
+|===
+include::{docdir}/assets/data/data.csv[]
+|===

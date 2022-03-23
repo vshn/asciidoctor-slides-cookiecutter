@@ -1,0 +1,5 @@
+== !
+
+// Slide with Asciinema movie available locally
+
+asciinema::assets/casts/backup.cast[poster="npt:0:40"]

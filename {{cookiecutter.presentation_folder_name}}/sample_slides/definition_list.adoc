@@ -1,0 +1,6 @@
+== Definition List
+
+// Useful when explaining technical terms
+
+Thing:: A thing is defined here
+Another Thing:: Another thing is defined here

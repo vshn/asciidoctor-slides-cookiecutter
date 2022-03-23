@@ -1,0 +1,5 @@
+// This weird syntax makes a single slide with a YouTube video in the background
+// You can actually embed any website into this slide, and it'll be rendered
+// This feature does require a network connection during the presentation!
+[%notitle,background-iframe="https://www.youtube.com/embed/LaApqL4QjH8?rel=0&start=3&enablejsapi=1&autoplay=1&loop=1&controls=0&modestbranding=1"]
+== YouTube Video in background

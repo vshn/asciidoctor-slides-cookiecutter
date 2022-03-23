@@ -155,372 +155,51 @@ VSHN AG – Neugasse 10 – CH-8005 Zürich – +41 44 545 53 00 – https://vsh
 {% if cookiecutter.include_sample_slides == "yes" %}
 // Sample slides
 
+include::sample_slides/admonition.adoc[]
 
-// This is a single line comment!
+include::sample_slides/asciinema.adoc[]
 
-////
-This is a multiline comment!
-This is a multiline comment!
-This is a multiline comment!
-////
+include::sample_slides/background_image.adoc[]
 
+include::sample_slides/bullet_points.adoc[]
 
+include::sample_slides/code.adoc[]
 
-== Bullet Points
+include::sample_slides/code_with_callout.adoc[]
 
-// Make bulletpoints appear one by one with the [%step] attribute
-[%step]
-* Foo
-* Bar
-* World
+include::sample_slides/columns_aligned_top.adoc[]
 
+include::sample_slides/columns_vertically_centered.adoc[]
 
+include::sample_slides/comments.adoc[]
 
+include::sample_slides/dark_background.adoc[]
 
+include::sample_slides/definition_list.adoc[]
 
-== Step by Step Elements
+include::sample_slides/diagrams.adoc[]
 
-// Lots of transitions available in the documentation
-// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/fragment/#step-style
+include::sample_slides/font_awesome_icons.adoc[]
 
-[.fade-right,step=3]
-Finally, a pro tip...
+include::sample_slides/horizontal_rule.adoc[]
 
-[.highlight-current-blue,step=1]
-First, watch out for...
+include::sample_slides/math.adoc[]
 
-[.grow,step=2]
-Second, don't forget...
+include::sample_slides/numbered_list.adoc[]
 
+include::sample_slides/step_by_step.adoc[]
 
+include::sample_slides/strikeout.adoc[]
 
+include::sample_slides/svg_logos.adoc[]
 
+include::sample_slides/table_from_csv.adoc[]
 
+include::sample_slides/table.adoc[]
 
-[.columns]
-[%notitle]
-== Columns aligned on top
+include::sample_slides/video.adoc[]
 
-// Learn more about column layout:
-// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/#columns-layout
-
-[.column]
---
-Do Lorem consequat veniam magna dolor dolore cupidatat et dolore ipsum amet proident. Eget Cum nec, nulla ultricies vel, eu magnis eget, tellus! Nisi? Dictum penatibus pretium? Lorem ligula consectetuer Vivamus eu, nisi sociis consequat ultricies tellus.
---
-
-[.column]
---
-Cupidatat deserunt sunt incididunt ad commodo consectetur ea consectetur.
-
-image::heroku.svg[width=100%]
---
-
-
-
-
-
-[.columns.is-vcentered]
-[%notitle]
-== Vertically centered columns
-
-[.column]
---
-image:vshn.svg[]
---
-
-[.column]
---
-icon:plus[size=2x]
---
-
-[.column]
---
-image:puzzle-itc.svg[]
---
-
-[.column]
---
-icon:equals[size=2x]
---
-
-[.column]
---
-image:appuio.svg[]
---
-
-
-
-
-
-== Admonition Blocks
-
-// Admonition blocks are useful to call for attention
-
-TIP: This is a tip
-
-NOTE: This is a note
-
-WARNING: This is a warning
-
-CAUTION: You have been warned
-
-IMPORTANT: This is very important
-
-
-
-// This weird syntax makes a single slide with a YouTube video in the background
-// You can actually embed any website into this slide, and it'll be rendered
-// This feature does require a network connection during the presentation!
-[%notitle,background-iframe="https://www.youtube.com/embed/LaApqL4QjH8?rel=0&start=3&enablejsapi=1&autoplay=1&loop=1&controls=0&modestbranding=1"]
-== YouTube Video in background
-
-
-
-
-
-== Numbered List
-
-// No need to write down the numbers, just use dots
-
-. First
-. Second
-. First
-
-
-
-
-
-== Diagrams
-
-// Diagrams are generated on the fly using https://kroki.vshn.net/
-// Various formats supported: ditaa, graphviz, plantuml, erc...
-// The final generated file is always a vector SVG image
-// The image is copied locally, no need for a network connection when presenting
-
-[ditaa]
-....
-                          +-------------+
-                          |             |
-                          | Exponential |
-                          |             |
-                          +-------------+
-                                 |
-                          lambda |
-                                 v
-+-------------+           +-------------+           +-------------+
-|             |   tau     |             |   lambda  |             |
-|  Lognormal  |---------->|    Gamma    |<----------|   Poisson   |
-|             |           |             |---+       |             |
-+-------------+           +-------------+   |       +-------------+
-      |                         ^ ^         | beta
-      |                   tau   | |         |
-      | tau                     | +---------+
-      |                   +-------------+
-      +------------------>|             |
-                          |   Normal    |
-                          |             |----+
-                          +-------------+    |
-                                     ^       | mu
-                                     |       |
-                                     +-------+
-....
-
-
-
-
-
-
-== Math Equations
-
-Using standard latexmath:[\LaTeX] syntax:
-
-[stem]
-++++
-\sqrt{37} = \sqrt{\frac{73^2-1}{12^2}} \approx \frac{73}{12} (1 - \frac{1}{2\cdot73^2})
-++++
-
-Another one:
-
-stem:[\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}]
-
-
-
-
-
-== Horizontal Rules
-
-Use three apostrophes `'''` to insert an horizontal rule:
-
-'''
-
-
-
-
-== Strikeout
-
-Strikeout [.line-through]#entire phrases# using [.line-through]#dashes#:
-
-[source]
-----
-[.line-through]#dashes#
-----
-
-
-
-
-
-== Definition List
-
-// Useful when explaining technical terms
-
-Thing:: A thing is defined here
-Another Thing:: Another thing is defined here
-
-
-
-
-
-== Table
-
-// Super easy to present tabular data stored in a CSV file
-
-[cols="h,d,d,d",options="header",format=csv]
-|===
-include::assets/data/data.csv[]
-|===
-
-
-
-
-== Various SVG Logos
-
-// TODO: Delete unused asset files from the final presentation
-
-More in the `assets/images` folder:
-
-image:azure.svg[width=150]
-image:google-cloud.svg[width=150]
-image:slack.svg[width=150]
-
-image:aws.svg[width=150]
-image:red-hat.svg[width=150]
-image:docker.svg[width=150]
-
-
-
-
-== !
-
-// The "!" is simply here to specify a slide without title
-
-Font Awesome icons: icon:tags[] icon:heart[size=2x,role="red"]
-
-Download: icon:download[link="https://handbook.vshn.ch/handbook.pdf"]
-
-[.notes]
---
-More icons here: https://fontawesome.com/icons?d=gallery&m=free
---
-
-
-
-
-
-[background-color="#404040"]
-== Dark Grey Background
-
-// Any CSS color will do the trick
-
-Great for images
-
-[.notes]
---
-Remember to tell a nice anecdote and to make a point.
---
-
-
-
-
-
-== !
-
-// Slide with Asciinema movie available locally
-
-asciinema::assets/casts/backup.cast[poster="npt:0:40"]
-
-
-
-
-
-== Video
-
-// Video slide
-
-video::toast.mp4[]
-
-
-
-
-
-== Code
-
-// Slide with some source code, including highlighting.
-// You do not need to paste the code here, you can insert it here
-// directly from an external file.
-
-[source,yaml]
-----
-include::assets/code/stuff.yml[]
-----
-
-
-
-
-[%notitle]
-== Go code with callout
-
-// You can use callouts to give context to certain lines of code
-
-[.stretch]
-[source,go]
-----
-package main
-
-import (
-	"fyne.io/fyne/app"
-	"fyne.io/fyne/widget"
-)
-
-func main() {
-	a := app.New() // <1>
-	w := a.NewWindow("Hello")
-	w.SetContent(widget.NewVBox(
-		widget.NewLabel("Hello Fyne!"),
-		widget.NewButton("Quit", func() { // <2>
-			a.Quit()
-		}),
-	))
-	w.ShowAndRun() // <3>
-}
-----
-
-<1> Birth of a new app
-<2> The magic of lambdas
-<3> Now you can see it
-
-
-
-
-
-[.coverimage]
-== Slide with a Background image
-
-image::vision.jpg[background, size=cover]
-
-* This is a list in in a slide with a background image
-* Make your cover images wide enough (in pixels) and light enough (below 1 MB)
-
+include::sample_slides/youtube_background.adoc[]
 
 // End of sample slides
 {% endif %}

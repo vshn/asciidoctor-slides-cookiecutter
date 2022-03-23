@@ -1,0 +1,12 @@
+== !
+
+// The "!" is simply here to specify a slide without title
+
+Font Awesome icons: icon:tags[] icon:heart[size=2x,role="red"]
+
+Download: icon:download[link="https://handbook.vshn.ch/handbook.pdf"]
+
+[.notes]
+--
+More icons here: https://fontawesome.com/icons?d=gallery&m=free
+--

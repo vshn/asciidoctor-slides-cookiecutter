@@ -1,0 +1,18 @@
+[.columns]
+[%notitle]
+== Columns aligned on top
+
+// Learn more about column layout:
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/layout/#columns-layout
+
+[.column]
+--
+Do Lorem consequat veniam magna dolor dolore cupidatat et dolore ipsum amet proident. Eget Cum nec, nulla ultricies vel, eu magnis eget, tellus! Nisi? Dictum penatibus pretium? Lorem ligula consectetuer Vivamus eu, nisi sociis consequat ultricies tellus.
+--
+
+[.column]
+--
+Cupidatat deserunt sunt incididunt ad commodo consectetur ea consectetur.
+
+image::heroku.svg[width=100%]
+--

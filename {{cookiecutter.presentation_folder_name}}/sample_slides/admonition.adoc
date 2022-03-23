@@ -1,0 +1,13 @@
+== Admonition Blocks
+
+// Admonition blocks are useful to call for attention
+
+TIP: This is a tip
+
+NOTE: This is a note
+
+WARNING: This is a warning
+
+CAUTION: You have been warned
+
+IMPORTANT: This is very important

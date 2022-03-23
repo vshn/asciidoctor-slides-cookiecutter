@@ -1,0 +1,5 @@
+== Horizontal Rules
+
+Use three apostrophes `'''` to insert an horizontal rule:
+
+'''

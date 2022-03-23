@@ -1,0 +1,8 @@
+== Strikeout
+
+Strikeout [.line-through]#entire phrases# using [.line-through]#dashes#:
+
+[source]
+----
+[.line-through]#dashes#
+----

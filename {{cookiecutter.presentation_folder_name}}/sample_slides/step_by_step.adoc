@@ -1,0 +1,13 @@
+== Step by Step Elements
+
+// Lots of transitions available in the documentation
+// https://docs.asciidoctor.org/reveal.js-converter/latest/converter/syntax/fragment/#step-style
+
+[.fade-right,step=3]
+Finally, a pro tip...
+
+[.highlight-current-blue,step=1]
+First, watch out for...
+
+[.grow,step=2]
+Second, don't forget...

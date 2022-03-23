@@ -1,0 +1,5 @@
+== Video
+
+// Video slide
+
+video::toast.mp4[]

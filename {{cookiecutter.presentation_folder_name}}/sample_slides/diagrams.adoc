@@ -1,0 +1,34 @@
+== Diagrams
+
+// Diagrams are generated on the fly using https://kroki.vshn.net/
+// Various formats supported: ditaa, graphviz, plantuml, erc...
+// The final generated file is always a vector SVG image
+// The image is copied locally, no need for a network connection when presenting
+
+[ditaa]
+....
+                          +-------------+
+                          |             |
+                          | Exponential |
+                          |             |
+                          +-------------+
+                                 |
+                          lambda |
+                                 v
++-------------+           +-------------+           +-------------+
+|             |   tau     |             |   lambda  |             |
+|  Lognormal  |---------->|    Gamma    |<----------|   Poisson   |
+|             |           |             |---+       |             |
++-------------+           +-------------+   |       +-------------+
+      |                         ^ ^         | beta
+      |                   tau   | |         |
+      | tau                     | +---------+
+      |                   +-------------+
+      +------------------>|             |
+                          |   Normal    |
+                          |             |----+
+                          +-------------+    |
+                                     ^       | mu
+                                     |       |
+                                     +-------+
+....

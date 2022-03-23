@@ -1,0 +1,7 @@
+== Bullet Points
+
+// Make bulletpoints appear one by one with the [%step] attribute
+[%step]
+* Foo
+* Bar
+* World

@@ -1,0 +1,11 @@
+[background-color="#404040"]
+== Dark Background
+
+// Any CSS color will do the trick
+
+Great for images
+
+[.notes]
+--
+Remember to tell a nice anecdote and to make a point.
+--

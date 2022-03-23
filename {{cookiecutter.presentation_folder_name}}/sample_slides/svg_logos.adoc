@@ -1,0 +1,13 @@
+== Various SVG Logos
+
+// TODO: Delete unused asset files from the final presentation
+
+More in the `assets/images` folder:
+
+image:azure.svg[width=150]
+image:google-cloud.svg[width=150]
+image:slack.svg[width=150]
+
+image:aws.svg[width=150]
+image:red-hat.svg[width=150]
+image:docker.svg[width=150]
