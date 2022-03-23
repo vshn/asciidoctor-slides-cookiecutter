@@ -5,4 +5,4 @@ node_modules
 *.pdf
 Caddyfile
 Guardfile
-#sample_slides
+sample_slides
