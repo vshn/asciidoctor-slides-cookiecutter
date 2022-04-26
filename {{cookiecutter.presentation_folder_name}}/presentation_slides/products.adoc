@@ -1,7 +1,7 @@
 [%notitle]
 == Our Products
 
-image::appuio.svg[height=200]
+image::appuio-cloud.svg[height=150]
 
 image::project-syn.svg[]
 
