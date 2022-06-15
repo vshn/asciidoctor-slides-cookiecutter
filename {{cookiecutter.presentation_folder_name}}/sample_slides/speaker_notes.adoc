@@ -1,4 +1,4 @@
-== Speaker Nodes
+== Speaker Notes
 
 Hit the kbd:[S] key to see the presenter screen, showing your notes.
 
