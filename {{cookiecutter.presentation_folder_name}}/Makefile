@@ -5,16 +5,19 @@ all: slides.html slides.pdf
 
 .PHONY: preview
 preview: slides.adoc
-	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.14
+	docker run --user "$$(id -u)" --rm --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build vshn/slides-preview:1.14.1
 
 slides.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.14 --filename slides.adoc
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.14.1 --filename slides.adoc
 
 slides.pdf: slides.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
+slides-with-transitions.pdf: slides.html
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html?fragments=true slides-with-transitions.pdf
+
 slides-with-notes.html: slides.adoc
-	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.14 --filename slides.adoc --show-notes --attribute slides-pdf-export --output slides-with-notes.html
+	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/build vshn/asciidoctor-slides:1.14.1 --filename slides.adoc --show-notes --attribute slides-pdf-export --output slides-with-notes.html
 
 slides-with-notes.pdf: slides-with-notes.html
 	docker run --rm --tty --user "$$(id -u)" --volume "$${PWD}":/slides astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
