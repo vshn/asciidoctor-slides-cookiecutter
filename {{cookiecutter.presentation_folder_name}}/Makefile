@@ -34,7 +34,7 @@ unused_images: slides.html
 
 .PHONY: speaker-notes
 speaker-notes: slides.adoc
-	docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 /convert/slides.adoc
+	@docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 /convert/slides.adoc
 
 .PHONY: docker
 docker: slides.pdf
