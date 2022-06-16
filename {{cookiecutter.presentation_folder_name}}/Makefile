@@ -32,6 +32,12 @@ unused_images: slides.html
 		fi; \
 	done;
 
+speaker-notes.html: slides.adoc
+	@docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 html /convert/slides.adoc
+
+speaker-notes.pdf: slides.adoc
+	@docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 pdf /convert/slides.adoc
+
 .PHONY: speaker-notes
 speaker-notes: slides.adoc
 	@docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 /convert/slides.adoc
