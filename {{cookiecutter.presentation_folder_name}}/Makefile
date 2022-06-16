@@ -32,6 +32,10 @@ unused_images: slides.html
 		fi; \
 	done;
 
+.PHONY: speaker-notes
+speaker-notes: slides.adoc
+	docker run --rm --volume ${PWD}:/convert vshn/slides-notes-exporter:1.0 /convert/slides.adoc
+
 .PHONY: docker
 docker: slides.pdf
 	docker build -t {{cookiecutter.presentation_folder_name}}:1.0 .
