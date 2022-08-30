@@ -1,6 +1,6 @@
 # ---------- STEP 1 ----------
 # Build the HTML slides
-FROM vshn/asciidoctor-slides:1.14.1 as htmlmaker
+FROM vshn/asciidoctor-slides:1.15.0 as htmlmaker
 
 COPY assets /build/assets
 COPY slides.adoc /build/slides.adoc

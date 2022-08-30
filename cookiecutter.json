@@ -1,7 +1,7 @@
 {
     "presentation_title": "Title of the presentation",
     "presentation_folder_name": "{{ cookiecutter.presentation_title | slugify }}",
-    "presentation_theme": ["vshn", "appuio"],
+    "presentation_theme": ["vshn", "appuio", "kiosk"],
     "author_name": "VSHNeer Name",
     "author_title": "DevOps Engineer",
     "author_email": "{{ cookiecutter.author_name | slugify(separator='.') }}@vshn.ch",

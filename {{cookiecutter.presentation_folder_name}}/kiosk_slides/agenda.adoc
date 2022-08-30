@@ -1,0 +1,30 @@
+[%notitle]
+== Agenda
+
+[cols="1,3s,3,1"]
+|===
+| 16:10
+| Welcome & Intro
+| {{cookiecutter.author_name}}
+| image:vshn.svg[]
+
+| 16:15
+| Presentation 1
+| Speaker 1
+| image:styra.svg[]
+
+| 16:50
+| Presentation 2
+| Speaker 2
+| image:isovalent.svg[]
+
+| 17:25
+| Presentation 3
+| Speaker 3
+| image:aws.svg[]
+
+| 18:00
+| Conclusion
+| Networking and apéro!
+|
+|===

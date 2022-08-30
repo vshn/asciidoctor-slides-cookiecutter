@@ -1,0 +1,9 @@
+== Follow Us!
+
+* icon:youtube[] icon:arrow-right[] https://vshn.tv
+* icon:twitter[] /vshn_ch
+* icon:gitlab[] /vshn
+* icon:github[] /vshn
+* icon:linkedin[] /company/vshn-ag
+* icon:facebook[] /vshn.ch
+* icon:instagram[] /vshn_ch
