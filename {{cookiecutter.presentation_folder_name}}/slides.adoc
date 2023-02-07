@@ -27,6 +27,14 @@
 :title-slide-background-size: cover
 :title-image: appuio.svg
 
+{% elif cookiecutter.presentation_theme == "projectsyn" %}
+
+:footer-text: Project Syn - by VSHN
+:footer-image: projectsyn_footer.svg
+:revealjs_customtheme: theme/projectsyn.css
+:title-slide-background-image:
+:title-image: project-syn.svg
+
 {% elif cookiecutter.presentation_theme == "kiosk" %}
 
 :revealjs_customtheme: theme/kiosk.css
