@@ -2,6 +2,14 @@
 
 Bootstrap your next presentation with Asciidoctor, Reveal.js and Git.
 
+== Asciidoctor Slides Infrastructure
+
+The following projects are part of the Asciidoctor Slides infrastructure:
+
+* https://git.vshn.net/education/asciidoctor-slides[Generator] encapsulating a Node.js application driving the creation of the `slides.html` HTML file
+* https://git.vshn.net/education/revealjs-template[Cookiecutter] offering a simple mechanism to generate new presentation slide projects (this project)
+* https://git.vshn.net/education/slides-preview[Preview] allowing the live preview of slides on `localhost:2020`
+
 == Usage with Cookiecutter
 
 [source,bash]
