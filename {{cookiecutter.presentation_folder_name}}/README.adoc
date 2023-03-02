@@ -39,7 +39,7 @@ TIP: Use a reverse proxy like https://ngrok.com/[ngrok] to share your slides liv
 The requirements for this project are:
 
 * `git`
-* `docker`
+* `podman` or `docker`
 * `make`
 
 == Build
@@ -48,7 +48,16 @@ Use the command `make` to build the presentation file. The new file `slides.html
 
 NOTE: For a PDF version, visit "Jobs" in the GitLab UI, click "Download Artifacts" on the right for the export/pdf row.
 
-== Docker
+== Docker & Podman
+
+By default, the `Makefile` works with Podman. You can use Docker instead by specifying it before the `make` command:
+
+[source,bash]
+--
+$ builder_cmd=docker make slides.pdf
+--
+
+== Docker Compose
 
 Run `docker-compose up --build` and open your browser at http://localhost:8080/ to see the presentation. The PDF slides are located at the URL http://localhost:8080/slides.pdf ready to be downloaded.
 
