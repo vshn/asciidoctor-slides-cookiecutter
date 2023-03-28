@@ -28,7 +28,7 @@ container:
 html-with-notes:
   stage: render
   image:
-    name: dockerhub.vshn.net/vshn/asciidoctor-slides:1.17.0
+    name: ghcr.io/vshn/asciidoctor-slides:1.17.0
     entrypoint:
     - /bin/sh
     - -c
@@ -59,7 +59,7 @@ html-with-notes:
 html:
   stage: render
   image:
-    name: dockerhub.vshn.net/vshn/asciidoctor-slides:1.17.0
+    name: ghcr.io/vshn/asciidoctor-slides:1.17.0
     entrypoint:
     - /bin/sh
     - -c
@@ -90,7 +90,7 @@ html:
 pdf-with-notes:
   stage: export
   image:
-    name: dockerhub.vshn.net/astefanutti/decktape:3.4.0
+    name: docker.io/astefanutti/decktape:3.4.0
     entrypoint:
     - /bin/sh
     - -c
@@ -110,7 +110,7 @@ pdf-with-notes:
 pdf:
   stage: export
   image:
-    name: dockerhub.vshn.net/astefanutti/decktape:3.4.0
+    name: docker.io/astefanutti/decktape:3.4.0
     entrypoint:
     - /bin/sh
     - -c

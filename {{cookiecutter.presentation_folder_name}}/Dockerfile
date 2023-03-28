@@ -1,6 +1,6 @@
 # ---------- STEP 1 ----------
 # Build the HTML slides
-FROM dockerhub.vshn.net/vshn/asciidoctor-slides:1.17.0 as htmlmaker
+FROM ghcr.io/vshn/asciidoctor-slides:1.17.0 as htmlmaker
 
 COPY assets /build/assets
 COPY slides.adoc /build/slides.adoc
@@ -8,7 +8,7 @@ RUN generate-vshn-slides --filename slides.adoc
 
 # ---------- STEP 2 ----------
 # Build the presentation in PDF format
-FROM dockerhub.vshn.net/astefanutti/decktape:3.4.0 as pdfmaker
+FROM ghcr.io/astefanutti/decktape:3.4.0 as pdfmaker
 
 COPY --from=htmlmaker /build/slides.html /slides/slides.html
 COPY --from=htmlmaker /build/assets /slides/assets
@@ -25,7 +25,7 @@ RUN node /decktape/decktape.js --chrome-path chromium-browser --chrome-arg=--no-
 
 # ---------- STEP 3 ----------
 # Docker image only containing nginx and the freshly built presentation files
-FROM dockerhub.vshn.net/vshn/nginx:1.21.1
+FROM ghcr.io/vshn/nginx:1.23.3
 
 # Finally, copy the contents of the presentation to be served
 COPY --from=htmlmaker /build/slides.html /usr/share/nginx/html/index.html
