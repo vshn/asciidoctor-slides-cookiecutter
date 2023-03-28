@@ -1,4 +1,4 @@
-= Reveal.js Presentation Template
+= Asciidoctor Slides Cookiecutter
 
 Bootstrap your next presentation with Asciidoctor, Reveal.js and Git.
 
