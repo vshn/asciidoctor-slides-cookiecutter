@@ -18,10 +18,10 @@ slides.html: slides.adoc
 	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/build:Z ghcr.io/vshn/asciidoctor-slides:1.17.0 --filename slides.adoc
 
 slides.pdf: slides.html
-	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z docker.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
+	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z ghcr.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html slides.pdf
 
 slides-with-transitions.pdf: slides.html
-	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z docker.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html?fragments=true slides-with-transitions.pdf
+	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z ghcr.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides.html?fragments=true slides-with-transitions.pdf
 
 slides-with-notes.html: slides.adoc
 	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/build:Z ghcr.io/vshn/asciidoctor-slides:1.17.0 --filename slides.adoc --show-notes --attribute slides-pdf-export --output slides-with-notes.html
@@ -30,7 +30,7 @@ slides-embedded.html: slides.adoc
 	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/build:Z ghcr.io/vshn/asciidoctor-slides:1.17.0 --filename slides.adoc --embedded --output slides-embedded.html
 
 slides-with-notes.pdf: slides-with-notes.html
-	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z docker.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
+	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/slides:Z ghcr.io/astefanutti/decktape:3.4.0 --size '1920x1080' --chrome-arg=--allow-file-access-from-files slides-with-notes.html slides-with-notes.pdf
 
 # This target lists the images not used in the final presentation,
 # and which could be removed.
