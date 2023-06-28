@@ -3,6 +3,9 @@
 FROM ghcr.io/vshn/asciidoctor-slides:1.17.0 as htmlmaker
 
 COPY assets /build/assets
+COPY presentation_slides /build/presentation_slides
+COPY sample_slides /build/sample_slides
+COPY kiosk_slides /build/kiosk_slides
 COPY slides.adoc /build/slides.adoc
 RUN generate-vshn-slides --filename slides.adoc
 
