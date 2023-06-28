@@ -3,7 +3,7 @@
 [%step]
 * Pronounced ˈvɪʒn – like "vision"
 * _The DevOps Company_
-* Founded 2014, 49 VSHNeers located in Zürich
+* Founded 2014, 51 VSHNeers located in Zürich
 * Switzerland's leading DevOps, Docker & Kubernetes partner
 * 24/7 support
 * ISO 27001 certified
@@ -12,5 +12,5 @@
 
 [.notes]
 --
-Just a few words about VSHN; that's how you pronounce the name, and we're "The DevOps Company". We've been in Zurich since 2014, we're 49 VSHNeers and we're Switzerland's leading DevOps, Docker & Kubernetes partner, offering 24/7 support to our customers. We've got a few certifications, and most importantly, we were the First Swiss Kubernetes Certified Service Provider back in 2016.
+Just a few words about VSHN; that's how you pronounce the name, and we're "The DevOps Company". We've been in Zurich since 2014, we're 51 VSHNeers and we're Switzerland's leading DevOps, Docker & Kubernetes partner, offering 24/7 support to our customers. We've got a few certifications, and most importantly, we were the First Swiss Kubernetes Certified Service Provider back in 2016.
 --
