@@ -12,7 +12,7 @@ all: slides.html slides.pdf
 
 .PHONY: preview
 preview: slides.adoc
-	$(builder_cmd) run $(docker_opts) --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build ghcr.io/vshn/asciidoctor-slides-preview:1.18.0
+	$(builder_cmd) run $(docker_opts) --publish 35729:35729 --publish 2020:2020 --volume "$${PWD}":/build ghcr.io/vshn/asciidoctor-slides-preview:1.17.1
 
 slides.html: slides.adoc
 	$(builder_cmd) run $(docker_opts) --volume "$${PWD}":/build ghcr.io/vshn/asciidoctor-slides:1.17.0 --filename slides.adoc
