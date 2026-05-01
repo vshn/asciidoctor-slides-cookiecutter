@@ -11,7 +11,7 @@ RUN generate-vshn-slides --filename slides.adoc
 
 # ---------- STEP 2 ----------
 # Build the presentation in PDF format
-FROM ghcr.io/astefanutti/decktape:3.4.0 as pdfmaker
+FROM ghcr.io/astefanutti/decktape:3.16.1 as pdfmaker
 
 COPY --from=htmlmaker /build/slides.html /slides/slides.html
 COPY --from=htmlmaker /build/assets /slides/assets
